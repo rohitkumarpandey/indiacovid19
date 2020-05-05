@@ -1,0 +1,57 @@
+<div class="row col-md-6 col-sm-10 col-md-offset-3">
+        
+            
+                <input id="searchInput" class="form-control" placeholder="Search State..." style="width: 100%;">
+                <p>{{date | date:'medium'}}</p>
+            
+            
+                <table id="summaryTable" class="table table-condensed w-auto" style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th style="color: orangered;" >Confirmed</th>
+                            <th style="color: royalblue;">Active</th>
+                            <th style="color: green;" >Recovered</th>
+                            <th style="color: gray;">Deceased</th>
+                    </tr>
+                    </thead>
+                    <tbody *ngFor="let t of total">
+                        <tr >
+                            <td style="color: orangered;">{{t.confirmed}}<p *ngIf="t.deltaConfirmed!=0" style="font-size: small;">&uarr;{{t.deltaConfirmed}}</p></td>
+                            <td style="color: royalblue;" >{{t.active}}</td>
+                            <td style="color: green;" >{{t.recovered}}<p *ngIf="t.deltaRecovered!=0" style="font-size: small;">&uarr;{{t.deltaRecovered}}</p></td>
+                            <td style="color: gray;">{{t.deceased}}<p *ngIf="t.deltaDeaths!=0" style="font-size: small;">&uarr;{{t.deltaDeaths}}</p></td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: small;" colspan=4>Last updated at:{{t.lastUpdated}}</td>
+                        </tr>
+                    </tbody>
+                   
+                </table>
+           
+        
+<div >
+    <table class="table table-hover">
+        <thead>
+            <tr>
+            <th>State/UT</th>
+            <th style="color: orangered;">Cnfrmd</th>
+            <th style="color: royalblue;">Active</th>
+            <th style="color: green;">Rcvrd</th>
+            <th style="color: gray;">Dcsd</th>
+        </tr>
+        </thead>
+        <tbody *ngFor="let state of statewiseTemp" id="stateTable">
+            <tr (click)="getStateDetails(state.name, state.confirmed,state.deltaConfirmed, state.active, state.recover, state.deltaRecovered, state.deceased,state.deltaDeaths, state.lastUpdated)" [routerLink]="['/state']">
+                <td style="text-align: left;">{{state.name}}</td>
+                <td style="text-align: right;"><strong *ngIf="state.deltaConfirmed!=0" style="font-size: small; color: red;">&uarr;{{state.deltaConfirmed}}&nbsp;</strong>{{state.confirmed}}</td>
+                <td>{{state.active}}</td>
+                <td style="text-align: right;" ><strong *ngIf="state.deltaRecovered!=0" style="font-size: small; color: green;">&uarr;{{state.deltaRecovered}}&nbsp;</strong>{{state.recover}}</td>
+                <td style="text-align: right;"><strong *ngIf="state.deltaDeaths!=0" style="font-size: small; color: gray;">&uarr;{{state.deltaDeaths}}&nbsp;</strong>{{state.deceased}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+</div>
+

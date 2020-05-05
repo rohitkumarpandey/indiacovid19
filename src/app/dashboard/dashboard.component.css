@@ -1,0 +1,49 @@
+body {
+    background-color: yellow;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+
+
+input{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+#summaryTable{
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}
+#summaryTable td{
+    font-size: 3vw;
+}
+table{
+    width: 100%;
+   margin-top: 10px;
+}
+td{
+    word-break:normal;
+}
+   
+   
+    
+
+thead{
+    text-align: center;
+    
+}
+th{
+    text-align: center;
+}
+tbody > tr{
+    text-align: center
+   
+}
+
+.table-hover tbody tr:hover{
+    color: #17223B;
+    background-color: whitesmoke;
+}

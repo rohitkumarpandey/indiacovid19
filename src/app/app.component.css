@@ -1,0 +1,46 @@
+/* @media screen and (max-width: 300px){
+    label{
+        font-size: large;
+        color: white;
+    }
+
+    ul li a{
+        text-decoration: none;
+        color: red;
+        font-size:large;
+    }
+}
+
+
+.container-fluid{
+    margin-bottom: 20vh;
+}
+
+ul li{
+    display: inline-block;
+    
+}
+
+
+
+ul{
+    margin-top: 5vh;
+}*/
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-size:medium;
+} 
+
+ul li a:hover{
+    color:gainsboro;
+}
+
+
+nav{
+    background:transparent;
+    border: 0;
+    border-width: 0;
+    color: white;
+    font-size: medium;
+}
