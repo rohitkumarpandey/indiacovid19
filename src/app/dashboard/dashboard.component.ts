@@ -29,12 +29,21 @@ export class DashboardComponent implements OnInit {
   totalConfirmed : number =0;
 
   constructor(private service : DasboardService, private dataService : DataService) { 
-    this.getStateWiseData();
     this.getAllData();
+    this.getStateWiseData();
     this.updateData();
   }
 
   ngOnInit(): void {
+    $(document).ready(function(){
+      $('#searchInput').on('keyup', function(){
+        var value = $(this).val().toString().toLowerCase();
+        $("#stateTable tr").filter(function(){
+           $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+           return true;
+        });
+      });
+  });
   }
 
 
@@ -77,6 +86,8 @@ export class DashboardComponent implements OnInit {
     } ).catch();
 }
 
+
+
   getStateDetails(name, confirmed,deltaConfirmed,active,recover,deltaRecovered,deceased, deltaDeaths, lastUpdated){
    // console.log(name, confirmed,deltaConfirmed,active,recover,deltaRecovered,deceased, deltaDeaths);
    this.dataService.setStateName(name, confirmed,deltaConfirmed,active,recover,deltaRecovered,deceased, deltaDeaths, lastUpdated);
@@ -90,15 +101,7 @@ export class DashboardComponent implements OnInit {
 
 ngAfterViewInit(){
 
-$(document).ready(function(){
-    $('#searchInput').on('keyup', function(){
-      var value = $(this).val().toString().toLowerCase();
-      $("#stateTable tr").filter(function(){
-         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-         return true;
-      });
-    });
-});
+
 }
 
 

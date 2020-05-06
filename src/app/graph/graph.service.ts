@@ -10,13 +10,22 @@ export class GraphService {
   constructor(private http : HttpClient) { }
 
   updateChart():Promise<any>{
-    return this.http.get(environment.graphDataUrl)
+    return this.http.get(environment.dataUrl)
     .toPromise()
     .then((res)=>{
-      console.log(res);
+      return res;
     })
     .catch()
 
 
+  }
+
+  getRawData():Promise<any>{
+    return this.http.get(environment.rawDataUrl)
+    .toPromise()
+    .then((res)=>{
+      return res;
+    })
+    .catch()
   }
 }

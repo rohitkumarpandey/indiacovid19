@@ -3,7 +3,7 @@ import { map } from 'rxjs/operators';
 import { AppService } from './app.service';
 import { Router } from '@angular/router';
 
-
+declare function setTheme(mode):any;
 
 
 
@@ -15,10 +15,22 @@ import { Router } from '@angular/router';
 export class AppComponent {
   signature : string = 'Creator:- Rohit Pandey!'; 
    constructor(private router : Router){
-     navigator.onLine ? console.log('Online') : router.navigateByUrl('/error');
+     //navigator.onLine ? console.log('Online') : router.navigateByUrl('/error');
        }
 
-   ngOnInit(){}
+   ngOnInit(){
+     
+  //   $('.navbar-collapse a').click(function(){
+  //     (<any>$(".navbar-collapse")).collapse('hide');
+  // });
+    
+   }
+
+   themeChange(mode){
+    setTheme(mode);
+     
+     
+   }
 
    
   

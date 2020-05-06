@@ -13,6 +13,7 @@ export class DataService {
 
 
   constructor(private http : HttpClient) { }
+
   setData(data){
     localStorage.setItem('data',JSON.stringify(data));
   }

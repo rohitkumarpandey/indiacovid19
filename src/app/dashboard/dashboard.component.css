@@ -1,13 +1,7 @@
-body {
-    background-color: yellow;
-  }
-  
-  @media only screen and (max-width: 600px) {
-    body {
-      background-color: lightblue;
-    }
-  }
 
+.row{
+    padding: 0;
+}
 
 input{
     margin-top: 5vh;
@@ -18,15 +12,18 @@ input{
     margin-bottom: 10vh;
 }
 #summaryTable td{
-    font-size: 3vw;
+    font-size: large;
 }
 table{
-    width: 100%;
+    table-layout: fixed;
+   
    margin-top: 10px;
+   padding: 0;
+   word-spacing: normal;
+   word-break: keep-all;
+   
 }
-td{
-    word-break:normal;
-}
+
    
    
     
@@ -37,9 +34,14 @@ thead{
 }
 th{
     text-align: center;
+    font-size: x-small;
+   
 }
 tbody > tr{
-    text-align: center
+    text-align: center;
+    font-size: x-small;
+    font-weight: 700;
+    line-height: 3em;
    
 }
 

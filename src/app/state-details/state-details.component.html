@@ -1,3 +1,6 @@
+<div class="row">
+<button class="btn btn-primary" style="float: left; background-color:darkslategray ;"><i class="fa fa-chevron-left" [routerLink]="['/home']" ></i></button>
+</div>
 <div id='contentBox' class="row col-md-6 col-md-offset-3">
     <label class="text-danger" style="font-size: xx-large; float: left; color: orangered;">{{state}}</label>
     <table id="summaryTable" class="table table-condensed w-auto" style="width: 100%;">
@@ -25,10 +28,10 @@
         <thead>
             <tr>
             <th>District</th>
-            <th style="color: orangered;">Cnfrmd</th>
+            <th style="color: orangered;">Confirmed</th>
             <th style="color: royalblue;">Active</th>
-            <th style="color: green;">Rcvrd</th>
-            <th style="color: gray;">Dcsd</th>
+            <th style="color: green;">Recovered</th>
+            <th style="color: gray;">Deceased</th>
         </tr>
         </thead>
         <tbody *ngFor="let district of districtDataTemp">
@@ -36,8 +39,8 @@
                 <td style="text-align: left;">{{district.name}}</td>
                 <td style="text-align: right;"><strong *ngIf="district.deltaConfirmed !='0'" style="font-size: small; color: orangered;">&uarr;{{district.deltaConfirmed}}&nbsp;</strong>{{district.confirmed}}</td>
                 <td>{{district.active}}</td>
-                <td style="text-align: right;"><strong *ngIf="district.deltaRecovered !='0'" style="font-size: small;  color: green;">&#91;&uarr;{{district.deltaRecovered}}&nbsp;</strong>{{district.recovered}}</td>
-                <td style="text-align: right;"><strong *ngIf="district.deltaDeaths !='0'" style="font-size: small; color: gray;">&#91;&uarr;{{district.deltaDeaths}}&nbsp;</strong>{{district.deceased}}</td>
+                <td style="text-align: right;"><strong *ngIf="district.deltaRecovered !='0'" style="font-size: small;  color: green;">&uarr;{{district.deltaRecovered}}&nbsp;</strong>{{district.recovered}}</td>
+                <td style="text-align: right;"><strong *ngIf="district.deltaDeaths !='0'" style="font-size: small; color: gray;">&uarr;{{district.deltaDeaths}}&nbsp;</strong>{{district.deceased}}</td>
             </tr>
         </tbody>
     </table>

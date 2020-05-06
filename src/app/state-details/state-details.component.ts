@@ -34,7 +34,7 @@ export class StateDetailsComponent implements OnInit {
        deltaDeaths: stateDetail.deltaDeaths, deltaRecovered : stateDetail.deltaRecovered, lastUpdated : stateDetail.lastUpdated});
       
        var stateDate = this.dataService.getData();
-      console.log(stateDate[this.state]);
+      //console.log(stateDate[this.state]);
        for(var district in stateDate[this.state].districtData){
          //console.log(stateDate[this.state].districtData[district].confirmed);
            this.districtDataTemp.push({name:district, confirmed:stateDate[this.state].districtData[district].confirmed,

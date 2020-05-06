@@ -9,8 +9,10 @@ export class DasboardService {
 
   constructor(private http : HttpClient) { }
 
+ 
+
   getAllData():Promise<any>{
-    return this.http.get('https://api.covid19india.org/data.json')
+    return this.http.get(environment.dataUrl)
     .toPromise()
     .then((res)=>{
       return res;
@@ -19,7 +21,7 @@ export class DasboardService {
   }
   
   getData():Promise<any>{
-    return this.http.get(environment.apiurl)
+    return this.http.get(environment.stateDistrictDataurl)
     .toPromise()
     .then(res=>{
      

@@ -1,6 +1,13 @@
+.row{
+    padding: 0;
+}
 table{
-    width: 100%;
-   margin-top: 10vh;
+    table-layout: fixed;
+   
+    margin-top: 10px;
+    padding: 0;
+    word-spacing: normal;
+    word-break: keep-all;
     
 }
 #summaryTable{
@@ -8,16 +15,24 @@ table{
     margin-bottom: 10vh;
 }
 #summaryTable td{
-    font-size: 3vw;
+    font-size: large;
 }
+
 thead{
     text-align: center;
+    
 }
 th{
     text-align: center;
+    font-size: x-small;
+   
 }
 tbody > tr{
     text-align: center;
+    font-size: x-small;
+    font-weight: 700;
+    line-height: 3em;
+   
 }
 
 
