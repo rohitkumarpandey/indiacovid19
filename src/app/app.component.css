@@ -1,17 +1,8 @@
-/* @media screen and (max-width: 300px){
-    label{
-        font-size: large;
-        color: white;
-    }
-
-    ul li a{
-        text-decoration: none;
-        color: red;
-        font-size:large;
-    }
+ @media screen and (max-width: 300px){
+  
 }
 
-
+/*
 .container-fluid{
     margin-bottom: 20vh;
 }
@@ -27,34 +18,42 @@ ul{
     margin-top: 5vh;
 }*/
 
- /* div.sticky{
+ div.sticky{
     position:sticky;
     top:0;
-    z-index: 1000; 
-    
-} */
+    z-index: 100; 
+    background-color: #17223B;
+}
+nav.sticky{
+    position:sticky;
+    top:0;
+    z-index:100; 
+    background: transparent;
+    }
 
 
 
 ul li a{
     text-decoration: none;
-    
     font-size:medium;
+    color: white;
 } 
 
 ul li a:hover{
     color:gainsboro;
 }
 
-
 nav{
     background:transparent;
     border: 0;
     border-width: 0;
-    
     font-size: medium;
-}
 
+}
+#myNavbar{
+    background-color: #17223B;
+}
  button{
-    background-color: gray;
+    background-color: transparent;
+    height: 5vh;
 }

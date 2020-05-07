@@ -1,34 +1,33 @@
-<div class="row"><label>INDIA COVID-19 Statistics</label></div>
+<div class="row" style="position: sticky;top: 5vh; z-index : 10000; background-color: #17223B;"><label>INDIA COVID-19 Statistics</label></div>
 
-<div class="row" style="display: inline-block; text-align: center;">
-   <div class="lineChart">
-<google-chart style="float: left;"  [width]="340" [height]="200" [title]="title" [type]="type" [data]="confirmedData"  [options]="confirmedOptions">
+<div class="row chartDiv" style="display: inline-block; text-align: center;">
+  
+<google-chart  [width]="350" [height]="200" [title]="title" [type]="type" [data]="confirmedData"  [options]="confirmedOptions">
 </google-chart>
-</div>
 
-<div class="lineChart">
- <google-chart style = "float: left;" title="People Recovered" [width]="340" [height]="200"[type]="type" [data]="recoveredData"  [options]="recoveredOptions">
+
+
+ <google-chart  title="People Recovered" [width]="350" [height]="200"[type]="type" [data]="recoveredData"  [options]="recoveredOptions">
 </google-chart>
-</div>
-<div class="lineChart">
-<google-chart style = "float: left;" title="Deceased People" [width]="340" [height]="200" [type]="type" [data]="deceasedData"  [options]="deceasedOptions">
+
+
+<google-chart  title="Deceased People" [width]="350" [height]="200" [type]="type" [data]="deceasedData"  [options]="deceasedOptions">
 </google-chart>
-</div>
+
 
 </div>
-<div class="row">
-<!-- <google-chart  title="Infection Ratio by Gender"  type ="PieChart" [data]="infectionRatioByGender" [columnNames]="columnNames" [options]="pieChartOptions"  [width]="350" [height]="200">
-</google-chart> -->
-
-<!-- <google-chart #chart
+<div class="row pieChartDiv">
+<strong class="text-danger">Data will be available soon...</strong>
+<google-chart #chart
    title="Infection Ratio by Gender"
    type="PieChart"
-   [data]="data"
-   
+   [data]="pieChartData"
    [options]="pieChartOptions"
-   [width]="width"
-   [height]="height">
-</google-chart> -->
+   width="350"
+   [columns]="columnNames"
+   noData = "No data available"
+   height="200">
+</google-chart>
 
 </div>
 

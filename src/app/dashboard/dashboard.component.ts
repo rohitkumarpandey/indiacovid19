@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DasboardService } from './dasboard.service';
 import { DataService } from '../data/data.service';
 import * as $ from 'jquery';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -28,7 +29,7 @@ export class DashboardComponent implements OnInit {
       deltaConfirmed:number, deltaDeaths: number, deltaRecovered : number, lastUpdated : string}> = [];
   totalConfirmed : number =0;
 
-  constructor(private service : DasboardService, private dataService : DataService) { 
+  constructor(private service : DasboardService, private dataService : DataService, private router : Router) { 
     this.getAllData();
     this.getStateWiseData();
     this.updateData();
@@ -90,8 +91,10 @@ export class DashboardComponent implements OnInit {
 
   getStateDetails(name, confirmed,deltaConfirmed,active,recover,deltaRecovered,deceased, deltaDeaths, lastUpdated){
    // console.log(name, confirmed,deltaConfirmed,active,recover,deltaRecovered,deceased, deltaDeaths);
-   this.dataService.setStateName(name, confirmed,deltaConfirmed,active,recover,deltaRecovered,deceased, deltaDeaths, lastUpdated);
-    
+   if(confirmed!=0){
+    this.dataService.setStateName(name, confirmed,deltaConfirmed,active,recover,deltaRecovered,deceased, deltaDeaths, lastUpdated);
+    this.router.navigateByUrl('/state');
+  }
   }
 
   updateData(){

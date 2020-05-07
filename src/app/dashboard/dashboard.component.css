@@ -1,3 +1,8 @@
+@media only screen and (max-width: 600px){
+    #stateTable thead tr th {
+        top: 6vh!important;
+    }
+}
 
 .row{
     padding: 0;
@@ -13,6 +18,9 @@ input{
 }
 #summaryTable td{
     font-size: large;
+}
+#summaryTable thead th{
+    font-size: smaller;
 }
 table{
     table-layout: fixed;
@@ -48,4 +56,12 @@ tbody > tr{
 .table-hover tbody tr:hover{
     color: #17223B;
     background-color: whitesmoke;
+}
+
+#stateTable thead tr th{
+    position: sticky;
+    top: 8vh;
+    background-color: whitesmoke;
+    font-size: smaller;
+    
 }

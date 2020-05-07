@@ -7,11 +7,12 @@ import { ErrorComponent } from './error/error.component';
 
 
 const routes: Routes = [
-  {path:'', component: DashboardComponent},
+  {path:'', redirectTo: '/home', pathMatch: 'full'},
   {path:'home', component : DashboardComponent},
   {path:'state', component : StateDetailsComponent},
   {path:'graph', component : GraphComponent},
-  {path:'error', component : ErrorComponent}
+  
+  {path:'**', component : ErrorComponent}
 ];
 
 @NgModule({

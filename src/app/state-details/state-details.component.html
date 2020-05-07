@@ -1,6 +1,7 @@
 <div class="row">
-<button class="btn btn-primary" style="float: left; background-color:darkslategray ;"><i class="fa fa-chevron-left" [routerLink]="['/home']" ></i></button>
+<button class="btn btn-primary" style="float: left;"><i class="fa fa-chevron-left" [routerLink]="['/home']" ></i></button>
 </div>
+<br>
 <div id='contentBox' class="row col-md-6 col-md-offset-3">
     <label class="text-danger" style="font-size: xx-large; float: left; color: orangered;">{{state}}</label>
     <table id="summaryTable" class="table table-condensed w-auto" style="width: 100%;">
@@ -20,18 +21,18 @@
                 <td style="color: gray;">{{t.deceased}}<p *ngIf="t.deltaDeaths !='0'" style="font-size: small;">&uarr;{{t.deltaDeaths}}</p></td>
             </tr>
             <tr>
-                <td style="font-size: small;" colspan=4>Last updated at:{{t.lastUpdated}}</td>
+                <td style="font-size: small;" colspan=4>Last updated at: {{t.lastUpdated}}</td>
             </tr>
         </tbody>
     </table>
-    <table class="table table-condensed table-hover w-auto" style="width: 100%;">
+    <table class="table table-condensed table-hover w-auto" style="width: 100%;" id="districtTable">
         <thead>
             <tr>
-            <th>District</th>
+            <th style="color: black;">District</th>
             <th style="color: orangered;">Confirmed</th>
             <th style="color: royalblue;">Active</th>
             <th style="color: green;">Recovered</th>
-            <th style="color: gray;">Deceased</th>
+            <th style="color: grey;">Deceased</th>
         </tr>
         </thead>
         <tbody *ngFor="let district of districtDataTemp">

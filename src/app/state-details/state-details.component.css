@@ -39,3 +39,15 @@ tbody > tr{
 .table-hover tbody tr:hover{
     color: #17223B;
 }
+#districtTable thead tr th{
+    position: sticky;
+    top: 6vh;
+    background-color: whitesmoke;
+    font-size: smaller;
+    
+}
+
+button{
+    margin-left: 1vw;
+    background-color: transparent;
+}

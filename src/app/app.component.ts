@@ -20,17 +20,17 @@ export class AppComponent {
 
    ngOnInit(){
      
-  //   $('.navbar-collapse a').click(function(){
-  //     (<any>$(".navbar-collapse")).collapse('hide');
-  // });
+    $('.navbar-collapse li a').click(function(){
+      (<any>$(".navbar-collapse")).collapse('hide');
+  });
     
    }
 
-   themeChange(mode){
-    setTheme(mode);
+  //  themeChange(mode){
+  //   setTheme(mode);
      
      
-   }
+  //  }
 
    
   
