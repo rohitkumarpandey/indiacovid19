@@ -3,6 +3,7 @@
        text-align: center!important;
        margin-top: 5vh!important;
        margin-left: 1vw!important;
+       float: none!important;
     }
     .chartDiv{
         text-align: center!important;
@@ -10,7 +11,10 @@
   
   }
 
-
+div.chartDiv{
+  display: inline-block;
+  text-align: center;
+}
 
 
 google-chart{

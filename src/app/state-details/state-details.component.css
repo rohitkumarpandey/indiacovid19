@@ -1,3 +1,9 @@
+@media only screen and (max-width: 600px){
+    #districtTable thead tr th {
+        top: 5vh!important;
+    }
+}
+
 .row{
     padding: 0;
 }
@@ -41,7 +47,7 @@ tbody > tr{
 }
 #districtTable thead tr th{
     position: sticky;
-    top: 6vh;
+    top: 8vh;
     background-color: whitesmoke;
     font-size: smaller;
     
@@ -50,4 +56,14 @@ tbody > tr{
 button{
     margin-left: 1vw;
     background-color: transparent;
+   float: left;
+    
 }
+
+button{
+     position: sticky;
+     z-index: 10000;
+        top:0;
+
+}
+
