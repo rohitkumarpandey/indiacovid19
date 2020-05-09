@@ -1,0 +1,42 @@
+
+<div class="row" style="position: sticky;top: 5vh; z-index : 10000; background-color: #17223B;"><label>INDIA COVID-19 Statistics</label></div>
+
+<app-loading  *ngIf="!isDataLoaded" ></app-loading>
+<div class="row chartDiv" *ngIf="isDataLoaded">
+  
+<google-chart  [width]="350" [height]="200" [title]="title" [type]="type" [data]="confirmedData"  [options]="confirmedOptions">
+</google-chart>
+
+
+
+ <google-chart  title="People Recovered" [width]="350" [height]="200"[type]="type" [data]="recoveredData"  [options]="recoveredOptions">
+</google-chart>
+
+
+<google-chart  title="Deceased People" [width]="350" [height]="200" [type]="type" [data]="deceasedData"  [options]="deceasedOptions">
+</google-chart>
+
+
+</div>
+<div class="row pieChartDiv">
+<strong class="text-danger">More charts will be available soon...</strong>
+<!-- <div id="piechart" style="width: 900px; height: 500px;"></div> -->
+<!-- <google-chart #chart
+   title="Infection Ratio by Gender"
+   type="LineChart"
+   [data]="pieChartData"
+   [options]="pieChartOptions"
+   width="350"
+   [columns]="columnNames"
+   noData = "No data available"
+   height="200">
+</google-chart> -->
+
+</div>
+
+
+
+<!-- <google-chart [title]="title" [type]="type" [data]="data" [columns]="columnNames" [options]="options">
+</google-chart>
+<google-chart [title]="title" [type]="type" [data]="data" [columns]="columnNames" [options]="options">
+</google-chart> -->

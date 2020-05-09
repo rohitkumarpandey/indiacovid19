@@ -1,0 +1,55 @@
+ @media screen and (max-width: 600px){
+     nav.sticky{
+         top :0!important;
+     }
+     #myNavbar{
+         width: 60%;
+         float: right;
+     }
+     #myNavbar ul{
+         float: left;
+     }
+  
+}
+
+
+ div.sticky{
+    position:sticky;
+    top:0;
+    z-index: 100; 
+    background-color: #010b13;
+}
+nav.sticky{
+    position:sticky;
+    top:38px;
+    z-index:100; 
+    background: transparent;
+    }
+
+
+
+ul li a{
+    text-decoration: none;
+    font-size:medium;
+    color: white;
+} 
+
+ul li a:hover{
+    color:gainsboro;
+}
+
+nav{
+    background:transparent;
+    border: 0;
+    border-width: 0;
+    font-size: medium;
+
+}
+#myNavbar{
+    background-color: #17223B;
+    border-radius: 5px;
+}
+ button{
+    background-color: transparent;
+    height: 5vh;
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>India Covid-19</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="icon" type="image/x-icon" href="indiacovid.ico" style="width: 100%; height: 100%;">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Flamenco' rel='stylesheet'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=BioRhyme' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- <style>
+     body {
+      display: block!important;
+    }
+    
+    @media only screen and (max-width: 600px) {
+      body {
+        display: flex!important;
+        box-sizing: content-box!important;
+        overflow-x: hidden!important;
+        background-repeat: no-repeat!important;
+        background-size: cover!important;
+        background-attachment: fixed;
+      }
+    }
+  </style> -->
+  <script>
+    function setTheme(mode){
+      var b = document.getElementById('body');
+      var n = document.getElementById('navbar');
+      if(mode=='dark'){
+        b.style.backgroundColor = '#17223B';
+        b.style.color = 'whitesmoke';
+      }else if(mode == 'light'){
+        n.style.color = 'black';
+        b.style.backgroundColor = 'whitesmoke';
+        b.style.color = 'gray';
+
+      }
+    }
+  </script>
+
+</head>
+<body id="body" style="background-color: #010b13; color: whitesmoke; text-align: center; font-family: 'BioRhyme';padding: 0;">
+  
+  <app-root></app-root>
+</body>
+</html>

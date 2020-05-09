@@ -1,0 +1,83 @@
+@media only screen and (max-width: 600px){
+    #stateTable thead tr th {
+        top: 5vh!important;
+    }
+    #summaryTable tbody tr td div{
+        height: 15vh!important;
+    }
+}
+
+.row{
+    padding: 0;
+}
+
+input{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+#summaryTable{
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}
+#summaryTable tr{
+    text-align: center;
+    background-color: #010b13;
+}
+#summaryTable td{
+    font-size: large;
+    
+}
+#summaryTable thead th{
+    font-size: smaller;
+   
+}
+#summaryTable tbody tr td div{
+    background-color: #17223B;
+    border-radius: 8px;
+    height: 10vh!important;
+    padding: 0.5em;
+    height: 100%;
+}
+table{
+    table-layout: fixed;
+   background-color: #292f34;
+   margin-top: 10px;
+   padding: 0.5em;
+   word-spacing: normal;
+   word-break: keep-all;
+   
+}
+
+   
+   
+    
+
+
+thead th{
+    text-align: center;
+    font-size: x-small;
+   
+}
+tbody > tr{
+    text-align: center;
+    font-size: x-small;
+    font-weight: 700;
+    line-height: 3em;
+    background-color: #17223B;
+    border-radius: 5px;
+   
+}
+
+
+.table-hover tbody tr:hover{
+    color: #17223B;
+    background-color: whitesmoke;
+}
+
+#stateTable thead tr th{
+    position: sticky;
+    top:14vh;
+    background-color: whitesmoke;
+    font-size: smaller;
+    
+}

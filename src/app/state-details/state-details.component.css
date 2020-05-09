@@ -1,0 +1,77 @@
+@media only screen and (max-width: 600px){
+    #districtTable thead tr th {
+        top: 5vh!important;
+    }
+}
+
+.row{
+    padding: 0;
+}
+table{
+    table-layout: fixed;
+   
+    margin-top: 10px;
+    padding: 0;
+    word-spacing: normal;
+    word-break: keep-all;
+    
+}
+#summaryTable{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+#summaryTable td{
+    font-size: large;
+}
+#summaryTable tbody tr td div{
+    background-color: #17223B;
+    border-radius: 8px;
+    height: 10vh!important;
+    padding: 0.5em;
+    height: 100%;
+}
+
+thead{
+    text-align: center;
+    
+}
+th{
+    text-align: center;
+    font-size: x-small;
+   
+}
+tbody > tr{
+    text-align: center;
+    font-size: x-small;
+    font-weight: 700;
+    line-height: 3em;
+    
+   
+}
+
+
+
+#districtTable thead tr th{
+    position: sticky;
+    top: 8vh;
+    background-color: whitesmoke;
+    font-size: smaller;
+    
+}
+#districtTable tbody tr td{
+    background-color: #17223B;
+}
+button{
+    margin-left: 1vw;
+    background-color: transparent;
+   float: left;
+    
+}
+
+button{
+     position: sticky;
+     z-index: 10000;
+        top:0;
+
+}
+
