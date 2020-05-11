@@ -21,7 +21,7 @@ input{
 }
 #summaryTable tr{
     text-align: center;
-    background-color: #010b13;
+    background-color: #282C35;
 }
 #summaryTable td{
     font-size: large;
@@ -40,7 +40,7 @@ input{
 }
 table{
     table-layout: fixed;
-   background-color: #292f34;
+   background-color: #282C35;
    margin-top: 10px;
    padding: 0.5em;
    word-spacing: normal;

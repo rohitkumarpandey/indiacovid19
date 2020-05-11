@@ -13,7 +13,7 @@ declare function setTheme(mode):any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  signature : string = 'Creator:- Rohit Pandey!'; 
+  signature : string = 'Developed By: ROHIT PANDEY'; 
    constructor(private router : Router){
        }
 

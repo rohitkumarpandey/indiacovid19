@@ -1,5 +1,5 @@
 @media only screen and (max-width: 600px) {
-    google-chart{
+  div.chartContainer{
        text-align: center!important;
        margin-top: 5vh!important;
        margin-left: 1vw!important;
@@ -7,6 +7,9 @@
     }
     .chartDiv{
         text-align: center!important;
+    }
+    #label{
+      top : 5vh!important;
     }
   
   }
@@ -16,13 +19,17 @@ div.chartDiv{
   text-align: center;
 }
 
-
-google-chart{
-       float: left;
-       margin-left: 1vw;
-       
-
+div.chartContainer{
+  background-color: #17223B;
+ text-align: center;
+ align-items: center;
+ border-radius: 5px;
+ padding: 10px;
+ margin-top: 20px;
+ float: left;
+ width: fit-content;
 }
+
 
 
 div.pieChartDiv{

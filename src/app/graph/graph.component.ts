@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GraphService } from './graph.service';
 import { DataService } from '../data/data.service';
-import { reduce } from 'rxjs/operators';
+
 declare var google :any;
 
 
@@ -16,24 +16,35 @@ export class GraphComponent implements OnInit {
   totalFemale:number = 0;
   totalOthers:number = 0;
   data;
-  pieChartData = [];
-
-
-//  options = {
-//   colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'], is3D: true
-// };
-
-  title = 'Confirmed cases in months';
-  type = 'LineChart';
   confirmedData = [];
   recoveredData = [];
   deceasedData = [];
-  columnNames = ['Male', 'Female', 'Others'];
+  infectionRatioByGender = [ ['Gender', 'Numbers']];
+  confirmedInMonths = [];
   
-  infectionRatioByGender = [];
+  confirmedInMonthsOptions ={
+    colors : ['red','grey'],
+    columnNames : ['Confirmed', 'Deceased'],
+    legend : {position : 'top'},
+    is3D : true
+  }
+
+  columnNames : ['Confirmed', 'Deceased'];
+
+  
+
+  recoveredInMonths = [];
+  deceasedInMonths = [];
+  deceasedInMonthsOptions ={
+    colors : ['grey'],
+    legend : 'none'
+  }
+
+
+  
   arr =[];
-  pieChartOptions = {
-    colors: ['#e0440e', '#e6693e', '#ec8f6e'], is3D: true,
+  infectionRatioByGenderOptions = {
+    colors: ['#85929E', '#e6693e', '#455AF3'], is3D: true,
     
  };
   confirmedOptions = {   
@@ -70,34 +81,49 @@ export class GraphComponent implements OnInit {
     
 
   ngOnInit() {
+    this.getRawData();
     this.updateChart();
-    // this.getRawData();
-    // google.charts.load('current', {'packages':['corechart']});
-  }
+       }
 
   updateChart(){
-    
+    var totalInMonth:number = 0;
+    var deceasedInMonth:number = 0;
+    var startMonth  = 'January';
+    for(var month in this.dataService.getAllData()['cases_time_series']){
+            this.arr = [];
+            
+            this.arr.push(this.dataService.getAllData()['cases_time_series'][month].date);
+            this.arr.push(Number(this.dataService.getAllData()['cases_time_series'][month].totalconfirmed));
+            this.confirmedData.push(this.arr);
+            
+            this.arr = [];
+            this.arr.push(this.dataService.getAllData()['cases_time_series'][month].date);
+            this.arr.push(Number(this.dataService.getAllData()['cases_time_series'][month].totalrecovered));
+            this.recoveredData.push(this.arr);
+            
+            this.arr = [];
+            this.arr.push(this.dataService.getAllData()['cases_time_series'][month].date);
+            this.arr.push(Number(this.dataService.getAllData()['cases_time_series'][month].totaldeceased));
+            this.deceasedData.push(this.arr);
 
-   for(var month in this.dataService.getAllData()['cases_time_series']){
-     this.arr = [];
-    this.arr.push(this.dataService.getAllData()['cases_time_series'][month].date);
-    this.arr.push(Number(this.dataService.getAllData()['cases_time_series'][month].totalconfirmed));
-    this.confirmedData.push(this.arr);
-    this.arr = [];
-    this.arr.push(this.dataService.getAllData()['cases_time_series'][month].date);
-    this.arr.push(Number(this.dataService.getAllData()['cases_time_series'][month].totalrecovered));
-    this.recoveredData.push(this.arr);
-    this.arr = [];
-    this.arr.push(this.dataService.getAllData()['cases_time_series'][month].date);
-    this.arr.push(Number(this.dataService.getAllData()['cases_time_series'][month].totaldeceased));
-    this.deceasedData.push(this.arr);
+            this.arr = [];
+            
+            if((this.dataService.getAllData()['cases_time_series'][month].date).includes(startMonth)){
+              totalInMonth += Number(this.dataService.getAllData()['cases_time_series'][month].dailyconfirmed);
+              deceasedInMonth += Number(this.dataService.getAllData()['cases_time_series'][month].dailydeceased);
+            }else{
+              this.confirmedInMonths.push([startMonth, totalInMonth, deceasedInMonth]);
+              startMonth = (this.dataService.getAllData()['cases_time_series'][month].date).trim().slice(2);
+              console.log(startMonth);
+              totalInMonth = Number(this.dataService.getAllData()['cases_time_series'][month].dailyconfirmed);
+              deceasedInMonth =  Number(this.dataService.getAllData()['cases_time_series'][month].dailydeceased);
+            }
+            
+            
 
-    this.isDataLoaded = true;
-
-
-}
-
-
+    }
+    this.confirmedInMonths.push([startMonth, totalInMonth, deceasedInMonth]);
+    console.log(this.confirmedInMonths);
     
   }
 
@@ -106,55 +132,46 @@ export class GraphComponent implements OnInit {
     .then((res)=>{
       
       this.data = res;
-    }).then((data)=>google.charts.setOnLoadCallback(this.updatePieChart(data)))
-    .catch();
-
       
+     this.updatePieChart(this.data);
+    }).catch();
 
     
 
   }
 
   updatePieChart(data){   
-    console.log(data); 
-    for(var d in this.data['raw_data']){
+    //console.log(data); 
+    for(var d in data['raw_data']){
      
-           if(this.data['raw_data'][d].gender == 'M'){
+           if(data['raw_data'][d].gender == 'M'){
             this.totalMale += 1;
-          }else if(this.data['raw_data'][d].gender == 'F'){
+          }else if(data['raw_data'][d].gender == 'F'){
             this.totalFemale +=1;           
            
-          }else{
+          }else if(data['raw_data'][d].gender == ''){
             this.totalOthers +=1;
         }
         
      
     }
         this.arr =[];
-        this.pieChartData.push(['Gender','Number'])
+        this.infectionRatioByGender = [];
         this.arr.push("Male");
         this.arr.push(Number(this.totalMale));
-        this.pieChartData.push(this.arr);
+        this.infectionRatioByGender.push(this.arr);
         this.arr = [];
         this.arr.push("Female");
         this.arr.push(Number(this.totalFemale));
-        this.pieChartData.push(this.arr);
+        this.infectionRatioByGender.push(this.arr);
         this.arr = [];
-        this.arr.push("Others");
+        this.arr.push("Not Specified");
         this.arr.push(Number(this.totalOthers));
-        this.pieChartData.push(this.arr);
+        this.infectionRatioByGender.push(this.arr);
        this.arr = [];
-
-       var temp = google.visualization.arrayToDataTable([
-        ['Task', 'Hours per Day'],
-        ['Work',     11],
-        ['Eat',      2],
-        ['Commute',  2],
-        ['Watch TV', 2],
-        ['Sleep',    7]
-      ]);
-       var chart = new google.visualization.PieChart(document.getElementById('pieChart'));
-       chart.draw(temp, this.pieChartOptions);
+       this.isDataLoaded = true;
+        
+      
   }
 
 

@@ -9,6 +9,11 @@
      #myNavbar ul{
          float: left;
      }
+
+     #signature{
+         height: 6vh!important;
+         border-radius: 6px!important;
+     }
   
 }
 
@@ -17,7 +22,7 @@
     position:sticky;
     top:0;
     z-index: 100; 
-    background-color: #010b13;
+    background-color: #1e272c;
 }
 nav.sticky{
     position:sticky;
@@ -52,4 +57,15 @@ nav{
  button{
     background-color: transparent;
     height: 5vh;
+}
+
+#signature{
+    margin-top: 5vh;
+    text-align: center;
+    background-color: transparent;
+    color: whitesmoke;
+    font-size: small;
+    height: 8vh;
+    text-align: right;
+    border-radius: 6px!important;
 }

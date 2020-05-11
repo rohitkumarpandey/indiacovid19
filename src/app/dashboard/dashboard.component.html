@@ -20,7 +20,7 @@
                     <tbody *ngFor="let t of total">
                         <tr >
                             <td style="color: orangered;"><div>{{t.confirmed}}<p *ngIf="t.deltaConfirmed!=0" style="font-size: small;">&uarr;{{t.deltaConfirmed}}</p></div></td>
-                            <td style="color: royalblue;" ><div style="height: 11.5vh;">{{t.active}}</div></td>
+                            <td style="color: royalblue;" ><div >{{t.active}}</div></td>
                             <td style="color: green;" ><div>{{t.recovered}}<p *ngIf="t.deltaRecovered!=0" style="font-size: small;">&uarr;{{t.deltaRecovered}}</p></div></td>
                             <td style="color: gray;"><div>{{t.deceased}}<p *ngIf="t.deltaDeaths!=0" style="font-size: small;">&uarr;{{t.deltaDeaths}}</p></div></td>
                         </tr>

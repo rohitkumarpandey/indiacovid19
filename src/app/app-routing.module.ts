@@ -12,7 +12,7 @@ const routes: Routes = [
   {path:'state', component : StateDetailsComponent},
   {path:'graph', component : GraphComponent},
   {path:'error', component : ErrorComponent},
-  {path:'**', component : DashboardComponent}
+  {path:'**', component : ErrorComponent}
 ];
 
 @NgModule({
