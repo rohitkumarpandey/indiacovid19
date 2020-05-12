@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data/data.service';
+import { StateService } from './state.service';
 
 @Component({
   selector: 'app-state-details',
@@ -7,76 +8,103 @@ import { DataService } from '../data/data.service';
   styleUrls: ['./state-details.component.css']
 })
 export class StateDetailsComponent implements OnInit {
-  state:string;
+  isDataLoaded : boolean = false;
   
+  stateDetail;
+  state:string;
+  resourcesCategory = [];
+  resources : Array<{category:string, city : string,descriptionandorserviceprovided :string, nameoftheorganisation : string, phonenumber : string}>=[];
+  districtZone : Array<{district : string, zone : string }> = [];
   stateDistrictData : Array<{name :string, confirmed:number, active:number, recover:number, deceased:number}> = [];
   total : Array<{confirmed:number, active:number, recovered:number, deceased:number,
-    deltaConfirmed:number, deltaDeaths: number, deltaRecovered : number, lastUpdated : string}> = [];
+  deltaConfirmed:number, deltaDeaths: number, deltaRecovered : number, lastUpdated : string}> = [];
+  districtDataTemp : Array<{name:string, confirmed:number, active:number, recovered:number, deceased:number,
+  deltaConfirmed:number, deltaDeaths: number, deltaRecovered : number , zone : string}> = []; 
 
-    districtDataTemp : Array<{name:string, confirmed:number, active:number, recovered:number, deceased:number,
-      deltaConfirmed:number, deltaDeaths: number, deltaRecovered : number}> = []; 
   
   
-      constructor(private dataService : DataService) {
-    //this.showData();
-    this.showDataTemp();
-   }
+  constructor(private dataService : DataService, private service : StateService) {}
 
   ngOnInit() {
+    this.stateDetail = this.dataService.getStateName();
+    this.state = this.stateDetail.name;
+    
+    this.getZoneData();
   }
 
   showDataTemp(){
-    var stateDetail = this.dataService.getStateName();
-    this.state = stateDetail.name;
-   // console.log("aaaaaaaaaa"+ stateName.name);
-    this.total.push({confirmed:stateDetail.confirmed, active:stateDetail.active, recovered:stateDetail.recover
-      , deceased:stateDetail.deceased, deltaConfirmed:stateDetail.deltaConfirmed,
-       deltaDeaths: stateDetail.deltaDeaths, deltaRecovered : stateDetail.deltaRecovered, lastUpdated : stateDetail.lastUpdated});
+    
+   
+    this.total.push({confirmed:this.stateDetail.confirmed, active:this.stateDetail.active, recovered:this.stateDetail.recover
+      , deceased:this.stateDetail.deceased, deltaConfirmed:this.stateDetail.deltaConfirmed,
+       deltaDeaths: this.stateDetail.deltaDeaths, deltaRecovered : this.stateDetail.deltaRecovered, lastUpdated : this.stateDetail.lastUpdated});
       
        var stateDate = this.dataService.getData();
-      //console.log(stateDate[this.state]);
+       var zone :string;
+      
        for(var district in stateDate[this.state].districtData){
-         //console.log(stateDate[this.state].districtData[district].confirmed);
+         this.districtZone.forEach(element => {
+           if(element.district == district){
+              zone = element.zone;
+           }
+           
+         });
            this.districtDataTemp.push({name:district, confirmed:stateDate[this.state].districtData[district].confirmed,
              active:stateDate[this.state].districtData[district].active,
               recovered:stateDate[this.state].districtData[district].recovered,
                deceased:stateDate[this.state].districtData[district].deceased,
        deltaConfirmed:stateDate[this.state].districtData[district].delta.confirmed,
         deltaDeaths: stateDate[this.state].districtData[district].delta.deceased,
-         deltaRecovered : stateDate[this.state].districtData[district].delta.recovered});
+         deltaRecovered : stateDate[this.state].districtData[district].delta.recovered,
+        zone : zone});
        }
 
-      //  stateDate[this.state].forEach(district => {
-      //    console.log(district);
-         
-      //  });
+       
+
+      
      
 
   
 }
 
-  showData(){
-    // this.state = this.dataService.getStateName();
-    // var stateData = this.dataService.getData()[this.dataService.getStateName()]
-    // for(var district in stateData.districtData){
-    //   this.confirmed += stateData.districtData[district].confirmed;
-    //   this.active += stateData.districtData[district].active;
-    //   this.recovered += stateData.districtData[district].recovered;
-    //   this.deceased += stateData.districtData[district].deceased;
-    //   this.stateDistrictData.push({name : district, confirmed: stateData.districtData[district].confirmed, active : stateData.districtData[district].active, recover: stateData.districtData[district].recovered, deceased : stateData.districtData[district].deceased})
-    // }
-    // var op = 0.1;
-    // var box = document.getElementById('contentBox');
-    // console.log(box);
-    // var timer = setInterval(()=>{
-    //     if(op>1){
-    //       clearInterval(timer);
-    //     }
-    //       box.style.opacity = String(op);
-    //       box.style.filter = 'alpha(opacity=' + op * 100 + ")";
-    //       op += op * 0.1;
-    // },20);
-  }
+//get zone data
+getZoneData(){
+  this.service.getZoneData()
+  .then((res)=>{
+    res['zones'].forEach(element => {
+      if(element.state == this.state){
+        this.districtZone.push({district : element.district, zone : element.zone.toLowerCase()});
+        
+      }
+    });
+  })
+  .then(()=> this.showDataTemp())
+  .then(()=>this.getResources())
+  .then(()=>{this.isDataLoaded = true})
+  .catch((error)=>{console.log(error)});
+
+  
+}
+
+  
+getResources(){
+  this.service.getResources()
+  .then((res)=>{
+    res['resources'].forEach(element => {
+      if(element.state == this.state){
+        if(!(this.resourcesCategory.includes(element.category))){
+           this.resourcesCategory.push( element.category);
+        }
+        this.resources.push({category:element.category, city : element.city,descriptionandorserviceprovided :element.descriptionandorserviceprovided,
+           nameoftheorganisation : element.nameoftheorganisation, phonenumber : element.phonenumber})
+      }
+    });
+    
+  })
+  .catch();
+}
+
+
 
   
 

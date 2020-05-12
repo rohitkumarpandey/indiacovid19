@@ -13,6 +13,9 @@ import { GoogleChartsModule } from 'angular-google-charts';
 import * as $ from 'jquery';
 import { ErrorComponent } from './error/error.component';
 import { LoadingComponent } from './loading/loading.component';
+import { ResourcesComponent } from './resources/resources.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 
@@ -25,8 +28,9 @@ import { LoadingComponent } from './loading/loading.component';
     StateDetailsComponent,
     GraphComponent,
     ErrorComponent,
-    LoadingComponent  ],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule, GoogleChartsModule ],
+    LoadingComponent,
+    ResourcesComponent ],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, GoogleChartsModule, FormsModule ],
   providers: [AppService],
   bootstrap: [AppComponent]
 })

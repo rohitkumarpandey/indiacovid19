@@ -71,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div id=\"label\" class=\"row\" style=\"position: sticky;top: 15vh; z-index : 10000; background-color: #282C35;\"><label>INDIA COVID-19 Statistics</label></div>\n\n<app-loading  *ngIf=\"!isDataLoaded\" ></app-loading>\n<div class=\"row chartDiv\" *ngIf=\"isDataLoaded\">\n <div class=\" container chartContainer\" *ngIf=\"isDataLoaded\"> \n    <label style=\"color: orangered;\">Confirmed Cases Over Months</label>\n<google-chart  [width]=\"300\" [height]=\"180\"  type=\"LineChart\" [data]=\"confirmedData\"  [options]=\"confirmedOptions\">\n</google-chart>\n</div>\n\n<div class=\" container chartContainer\" *ngIf=\"isDataLoaded\"> \n   <label style=\"color: green;\">People Recovered</label>\n <google-chart  [width]=\"300\" [height]=\"180\" type=\"LineChart\" [data]=\"recoveredData\"  [options]=\"recoveredOptions\">\n</google-chart>\n</div>\n\n\n<div class=\" container chartContainer\" *ngIf=\"isDataLoaded\"> \n   <label style=\"color: gainsboro;\">Deceased People</label>\n<google-chart   [width]=\"300\" [height]=\"180\" type=\"LineChart\" [data]=\"deceasedData\"  [options]=\"deceasedOptions\">\n</google-chart>\n</div>\n\n\n\n\n</div>\n<br>\n\n<div class=\"row pieChartDiv\">\n\n   <div class=\"container chartContainer\" *ngIf=\"isDataLoaded\">\n      <label style=\"color: gainsboro;\">Confirmed Cases in Months</label>\n\n     \n\n      <google-chart \n         type=\"ColumnChart\"\n         [data]=\"confirmedInMonths\"\n         \n         [options] = \"confirmedInMonthsOptions\"\n         width=\"300\"   \n         height=\"180\">\n      </google-chart>\n      \n      </div>\n\n\n   \n   <div class=\"container chartContainer\" *ngIf=\"isDataLoaded\">\n      <label style=\"color: gainsboro;\">Infection Ratio by Gender</label>\n\n      <google-chart \n      \n         type=\"PieChart\"\n         [data]=\"infectionRatioByGender\"\n         [options] = \"infectionRatioByGenderOptions\"\n         width=\"300\"   \n         height=\"180\">\n      </google-chart>\n      \n      </div>\n\n\n    \n\n     \n</div>\n\n\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div id=\"label\" class=\"row\" style=\"position: sticky;top: 15vh; z-index : 10000; background-color: #282C35;\"><label>INDIA COVID-19 Statistics</label></div>\n\n<app-loading  *ngIf=\"!isDataLoaded\" ></app-loading>\n<div class=\"row chartDiv\" *ngIf=\"isDataLoaded\">\n <div class=\" container chartContainer\" > \n    <label style=\"color: orangered;\">Confirmed Cases Over Months</label>\n<google-chart  [width]=\"320\" [height]=\"200\"  type=\"LineChart\" [data]=\"confirmedData\"  [options]=\"confirmedOptions\">\n</google-chart>\n</div>\n\n<div class=\" container chartContainer\" > \n   <label style=\"color: forestgreen;\">People Recovered</label>\n <google-chart  [width]=\"320\" [height]=\"200\" type=\"LineChart\" [data]=\"recoveredData\"  [options]=\"recoveredOptions\">\n</google-chart>\n</div>\n\n\n<div class=\" container chartContainer\"> \n   <label style=\"color: gainsboro;\">Deceased People</label>\n<google-chart   [width]=\"320\" [height]=\"200\" type=\"LineChart\" [data]=\"deceasedData\"  [options]=\"deceasedOptions\">\n</google-chart>\n</div>\n\n\n\n\n</div>\n<br>\n\n<div class=\"row pieChartDiv\" *ngIf=\"isDataLoaded\">\n\n   <div class=\"container chartContainer\" >\n      <label style=\"color: gainsboro;\">Confirmed Cases in Months</label>\n\n     \n\n      <google-chart \n         type=\"ColumnChart\"\n         [data]=\"confirmedInMonths\"\n         \n         [options] = \"confirmedInMonthsOptions\"\n         [width]=\"320\" [height]=\"200\">\n      </google-chart>\n      \n      </div>\n\n\n   \n   <div class=\"container chartContainer\" >\n      <label style=\"color: gainsboro;\">Infection Ratio by Gender</label>\n\n      <google-chart \n      \n         type=\"PieChart\"\n         [data]=\"infectionRatioByGender\"\n         [options] = \"infectionRatioByGenderOptions\"\n         [width]=\"320\" [height]=\"200\">\n      </google-chart>\n      \n      </div>\n\n\n    \n\n     \n</div>\n\n\n\n");
 
 /***/ }),
 
@@ -88,6 +88,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/resources/resources.component.html":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/resources/resources.component.html ***!
+  \******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>resources works!</p>\n<p>{{resourceCategory}}</p>\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/state-details/state-details.component.html":
 /*!**************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/state-details/state-details.component.html ***!
@@ -97,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row \">\n<button class=\"btn btn-primary\"><i class=\"fa fa-chevron-left\" [routerLink]=\"['/home']\" ></i></button>\n</div>\n<br>\n<div id='contentBox' class=\"row col-md-6 col-md-offset-3\">\n    <label class=\"text-danger\" style=\"font-size: xx-large; float: left; color: orangered;\">{{state}}</label>\n    <table id=\"summaryTable\" class=\"table table-condensed w-auto\" style=\"width: 100%;\">\n        <thead>\n            <tr>\n            <th style=\"color: orangered;\" >Confirmed</th>\n            <th style=\"color: royalblue;\">Active</th>\n            <th style=\"color: green;\" >Recovered</th>\n            <th style=\"color: gray;\">Deceased</th>\n        </tr>\n        </thead>\n        <tbody *ngFor=\"let t of total\">\n            <tr >\n                <td style=\"color: orangered;\"><div>{{t.confirmed}}<p *ngIf=\"t.deltaConfirmed!=0\" style=\"font-size: small;\">&uarr;{{t.deltaConfirmed}}</p></div></td>\n                <td style=\"color: royalblue;\" ><div >{{t.active}}</div></td>\n                <td style=\"color: green;\" ><div>{{t.recovered}}<p *ngIf=\"t.deltaRecovered!=0\" style=\"font-size: small;\">&uarr;{{t.deltaRecovered}}</p></div></td>\n                <td style=\"color: gray;\"><div>{{t.deceased}}<p *ngIf=\"t.deltaDeaths!=0\" style=\"font-size: small;\">&uarr;{{t.deltaDeaths}}</p></div></td>\n            </tr>\n            <tr>\n                <td style=\"font-size: small;\" colspan=4>Last updated at: {{t.lastUpdated}}</td>\n            </tr>\n        </tbody>\n    </table>\n    <table class=\"table table-condensed table-hover w-auto\" style=\"width: 100%;\" id=\"districtTable\">\n        <thead>\n            <tr>\n            <th style=\"color: black;\">District</th>\n            <th style=\"color: orangered;\">Confirmed</th>\n            <th style=\"color: royalblue;\">Active</th>\n            <th style=\"color: green;\">Recovered</th>\n            <th style=\"color: grey;\">Deceased</th>\n        </tr>\n        </thead>\n        <tbody *ngFor=\"let district of districtDataTemp\">\n            <tr>\n                <td style=\"text-align: left;\">{{district.name}}</td>\n                <td style=\"text-align: right;\"><strong *ngIf=\"district.deltaConfirmed !='0'\" style=\"font-size: small; color: orangered;\">&uarr;{{district.deltaConfirmed}}&nbsp;</strong>{{district.confirmed}}</td>\n                <td>{{district.active}}</td>\n                <td style=\"text-align: right;\"><strong *ngIf=\"district.deltaRecovered !='0'\" style=\"font-size: small;  color: green;\">&uarr;{{district.deltaRecovered}}&nbsp;</strong>{{district.recovered}}</td>\n                <td style=\"text-align: right;\"><strong *ngIf=\"district.deltaDeaths !='0'\" style=\"font-size: small; color: gray;\">&uarr;{{district.deltaDeaths}}&nbsp;</strong>{{district.deceased}}</td>\n            </tr>\n        </tbody>\n    </table>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<app-loading  *ngIf=\"!isDataLoaded\" ></app-loading>\n<div class=\"row\" *ngIf=\"isDataLoaded\">\n<button class=\"btn btn-primary\"><i class=\"fa fa-chevron-left\" [routerLink]=\"['/home']\" ></i></button>\n</div>\n<br>\n<div id='contentBox' class=\"row col-md-6 col-md-offset-3\" *ngIf=\"isDataLoaded\">\n    <label class=\"text-danger\" style=\"font-size: xx-large; float: left; color: orangered;\">{{state}}</label>\n    <table id=\"summaryTable\" class=\"table table-condensed w-auto\" style=\"width: 100%;\">\n        <thead>\n            <tr>\n            <th style=\"color: orangered;\" >Confirmed</th>\n            <th style=\"color: royalblue;\">Active</th>\n            <th style=\"color: green;\" >Recovered</th>\n            <th style=\"color: gray;\">Deceased</th>\n        </tr>\n        </thead>\n        <tbody *ngFor=\"let t of total\">\n            <tr >\n                <td style=\"color: orangered;\"><div>{{t.confirmed}}<p *ngIf=\"t.deltaConfirmed!=0\" style=\"font-size: small;\">&uarr;{{t.deltaConfirmed}}</p></div></td>\n                <td style=\"color: royalblue;\" ><div >{{t.active}}</div></td>\n                <td style=\"color: green;\" ><div>{{t.recovered}}<p *ngIf=\"t.deltaRecovered!=0\" style=\"font-size: small;\">&uarr;{{t.deltaRecovered}}</p></div></td>\n                <td style=\"color: gray;\"><div>{{t.deceased}}<p *ngIf=\"t.deltaDeaths!=0\" style=\"font-size: small;\">&uarr;{{t.deltaDeaths}}</p></div></td>\n            </tr>\n            <tr>\n                <td style=\"font-size: small;\" colspan=4>Last updated at: {{t.lastUpdated}}</td>\n            </tr>\n        </tbody>\n    </table>\n    <table class=\"table table-condensed table-hover w-auto\" style=\"width: 100%;\" id=\"districtTable\">\n        <thead>\n            <tr>\n            <th style=\"color: black;\">District</th>\n            <th style=\"color: orangered;\">Confirmed</th>\n            <th style=\"color: royalblue;\">Active</th>\n            <th style=\"color: green;\">Recovered</th>\n            <th style=\"color: grey;\">Deceased</th>\n        </tr>\n        </thead>\n        <tbody *ngFor=\"let district of districtDataTemp\">\n            <tr >\n                <td  style=\"text-align: left;\"><div [style.background] = 'district.zone'>&nbsp;{{district.name}}</div></td>\n                <td style=\"text-align: right;\"><strong *ngIf=\"district.deltaConfirmed !='0'\" style=\"font-size: small; color: orangered;\">&uarr;{{district.deltaConfirmed}}&nbsp;</strong>{{district.confirmed}}</td>\n                <td>{{district.active}}</td>\n                <td style=\"text-align: right;\"><strong *ngIf=\"district.deltaRecovered !='0'\" style=\"font-size: small;  color: green;\">&uarr;{{district.deltaRecovered}}&nbsp;</strong>{{district.recovered}}</td>\n                <td style=\"text-align: right;\"><strong *ngIf=\"district.deltaDeaths !='0'\" style=\"font-size: small; color: gray;\">&uarr;{{district.deltaDeaths}}&nbsp;</strong>{{district.deceased}}</td>\n            </tr>\n        </tbody>\n    </table>\n</div>\n\n<div class=\"container categoryContainer\"  *ngIf=\"isDataLoaded\">\n    <div class=\"form-group\">\n        <select  class=\"form-control\" id=\"category\" >\n        <option *ngFor='let category of resourcesCategory' [value]=\"category\">{{category}}</option>\n    </select>\n</div>\n<!-- <app-resources [category]=\"selectedCategory\" *ngIf=\"!electedCategory\"></app-resources> -->\n</div>\n");
 
 /***/ }),
 
@@ -476,6 +489,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var angular_google_charts__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! angular-google-charts */ "./node_modules/angular-google-charts/fesm2015/angular-google-charts.js");
 /* harmony import */ var _error_error_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./error/error.component */ "./src/app/error/error.component.ts");
 /* harmony import */ var _loading_loading_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./loading/loading.component */ "./src/app/loading/loading.component.ts");
+/* harmony import */ var _resources_resources_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./resources/resources.component */ "./src/app/resources/resources.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+
+
 
 
 
@@ -499,9 +516,10 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _state_details_state_details_component__WEBPACK_IMPORTED_MODULE_8__["StateDetailsComponent"],
             _graph_graph_component__WEBPACK_IMPORTED_MODULE_9__["GraphComponent"],
             _error_error_component__WEBPACK_IMPORTED_MODULE_11__["ErrorComponent"],
-            _loading_loading_component__WEBPACK_IMPORTED_MODULE_12__["LoadingComponent"]
+            _loading_loading_component__WEBPACK_IMPORTED_MODULE_12__["LoadingComponent"],
+            _resources_resources_component__WEBPACK_IMPORTED_MODULE_13__["ResourcesComponent"]
         ],
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"], angular_google_charts__WEBPACK_IMPORTED_MODULE_10__["GoogleChartsModule"]],
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"], angular_google_charts__WEBPACK_IMPORTED_MODULE_10__["GoogleChartsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_14__["FormsModule"]],
         providers: [_app_service__WEBPACK_IMPORTED_MODULE_4__["AppService"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
     })
@@ -840,7 +858,7 @@ ErrorComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("@media only screen and (max-width: 600px) {\r\n  div.chartContainer{\r\n       text-align: center!important;\r\n       margin-top: 5vh!important;\r\n       margin-left: 1vw!important;\r\n       float: none!important;\r\n    }\r\n    .chartDiv{\r\n        text-align: center!important;\r\n    }\r\n    #label{\r\n      top : 5vh!important;\r\n    }\r\n  \r\n  }\r\n\r\ndiv.chartDiv{\r\n  display: inline-block;\r\n  text-align: center;\r\n}\r\n\r\ndiv.chartContainer{\r\n  background-color: #17223B;\r\n text-align: center;\r\n align-items: center;\r\n border-radius: 5px;\r\n padding: 10px;\r\n margin-top: 20px;\r\n float: left;\r\n width: -webkit-fit-content;\r\n width: -moz-fit-content;\r\n width: fit-content;\r\n}\r\n\r\ndiv.pieChartDiv{\r\n  margin-top: 10vh;\r\n  display: inline-block;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ3JhcGgvZ3JhcGguY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO09BQ0ssNEJBQTRCO09BQzVCLHlCQUF5QjtPQUN6QiwwQkFBMEI7T0FDMUIscUJBQXFCO0lBQ3hCO0lBQ0E7UUFDSSw0QkFBNEI7SUFDaEM7SUFDQTtNQUNFLG1CQUFtQjtJQUNyQjs7RUFFRjs7QUFFRjtFQUNFLHFCQUFxQjtFQUNyQixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSx5QkFBeUI7Q0FDMUIsa0JBQWtCO0NBQ2xCLG1CQUFtQjtDQUNuQixrQkFBa0I7Q0FDbEIsYUFBYTtDQUNiLGdCQUFnQjtDQUNoQixXQUFXO0NBQ1gsMEJBQWtCO0NBQWxCLHVCQUFrQjtDQUFsQixrQkFBa0I7QUFDbkI7O0FBSUE7RUFDRSxnQkFBZ0I7RUFDaEIscUJBQXFCO0FBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvZ3JhcGgvZ3JhcGguY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNjAwcHgpIHtcclxuICBkaXYuY2hhcnRDb250YWluZXJ7XHJcbiAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXIhaW1wb3J0YW50O1xyXG4gICAgICAgbWFyZ2luLXRvcDogNXZoIWltcG9ydGFudDtcclxuICAgICAgIG1hcmdpbi1sZWZ0OiAxdnchaW1wb3J0YW50O1xyXG4gICAgICAgZmxvYXQ6IG5vbmUhaW1wb3J0YW50O1xyXG4gICAgfVxyXG4gICAgLmNoYXJ0RGl2e1xyXG4gICAgICAgIHRleHQtYWxpZ246IGNlbnRlciFpbXBvcnRhbnQ7XHJcbiAgICB9XHJcbiAgICAjbGFiZWx7XHJcbiAgICAgIHRvcCA6IDV2aCFpbXBvcnRhbnQ7XHJcbiAgICB9XHJcbiAgXHJcbiAgfVxyXG5cclxuZGl2LmNoYXJ0RGl2e1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuXHJcbmRpdi5jaGFydENvbnRhaW5lcntcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMTcyMjNCO1xyXG4gdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuIGJvcmRlci1yYWRpdXM6IDVweDtcclxuIHBhZGRpbmc6IDEwcHg7XHJcbiBtYXJnaW4tdG9wOiAyMHB4O1xyXG4gZmxvYXQ6IGxlZnQ7XHJcbiB3aWR0aDogZml0LWNvbnRlbnQ7XHJcbn1cclxuXHJcblxyXG5cclxuZGl2LnBpZUNoYXJ0RGl2e1xyXG4gIG1hcmdpbi10b3A6IDEwdmg7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG59Il19 */");
+/* harmony default export */ __webpack_exports__["default"] = ("@media only screen and (max-width: 600px) {\r\n  div.chartContainer{\r\n       text-align: center!important;\r\n       margin-top: 5vh!important;\r\n       margin-left: 1vw!important;\r\n       float: none!important;\r\n    }\r\n    .chartDiv{\r\n        text-align: center!important;\r\n    }\r\n    #label{\r\n      top : 5vh!important;\r\n    }\r\n  \r\n  }\r\n\r\ndiv.chartDiv{\r\n  display: inline-block;\r\n  text-align: center;\r\n}\r\n\r\ndiv.chartContainer{\r\n  background-color: transparent;\r\n text-align: center;\r\n align-items: center;\r\n border-radius: 5px;\r\n padding: 10px;\r\n margin-top: 20px;\r\n float: left;\r\n width: -webkit-fit-content;\r\n width: -moz-fit-content;\r\n width: fit-content;\r\n}\r\n\r\ndiv.pieChartDiv{\r\n  margin-top: 10vh;\r\n  display: inline-block;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ3JhcGgvZ3JhcGguY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO09BQ0ssNEJBQTRCO09BQzVCLHlCQUF5QjtPQUN6QiwwQkFBMEI7T0FDMUIscUJBQXFCO0lBQ3hCO0lBQ0E7UUFDSSw0QkFBNEI7SUFDaEM7SUFDQTtNQUNFLG1CQUFtQjtJQUNyQjs7RUFFRjs7QUFFRjtFQUNFLHFCQUFxQjtFQUNyQixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSw2QkFBNkI7Q0FDOUIsa0JBQWtCO0NBQ2xCLG1CQUFtQjtDQUNuQixrQkFBa0I7Q0FDbEIsYUFBYTtDQUNiLGdCQUFnQjtDQUNoQixXQUFXO0NBQ1gsMEJBQWtCO0NBQWxCLHVCQUFrQjtDQUFsQixrQkFBa0I7QUFDbkI7O0FBSUE7RUFDRSxnQkFBZ0I7RUFDaEIscUJBQXFCO0FBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvZ3JhcGgvZ3JhcGguY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNjAwcHgpIHtcclxuICBkaXYuY2hhcnRDb250YWluZXJ7XHJcbiAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXIhaW1wb3J0YW50O1xyXG4gICAgICAgbWFyZ2luLXRvcDogNXZoIWltcG9ydGFudDtcclxuICAgICAgIG1hcmdpbi1sZWZ0OiAxdnchaW1wb3J0YW50O1xyXG4gICAgICAgZmxvYXQ6IG5vbmUhaW1wb3J0YW50O1xyXG4gICAgfVxyXG4gICAgLmNoYXJ0RGl2e1xyXG4gICAgICAgIHRleHQtYWxpZ246IGNlbnRlciFpbXBvcnRhbnQ7XHJcbiAgICB9XHJcbiAgICAjbGFiZWx7XHJcbiAgICAgIHRvcCA6IDV2aCFpbXBvcnRhbnQ7XHJcbiAgICB9XHJcbiAgXHJcbiAgfVxyXG5cclxuZGl2LmNoYXJ0RGl2e1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuXHJcbmRpdi5jaGFydENvbnRhaW5lcntcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDtcclxuIHRleHQtYWxpZ246IGNlbnRlcjtcclxuIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiBib3JkZXItcmFkaXVzOiA1cHg7XHJcbiBwYWRkaW5nOiAxMHB4O1xyXG4gbWFyZ2luLXRvcDogMjBweDtcclxuIGZsb2F0OiBsZWZ0O1xyXG4gd2lkdGg6IGZpdC1jb250ZW50O1xyXG59XHJcblxyXG5cclxuXHJcbmRpdi5waWVDaGFydERpdntcclxuICBtYXJnaW4tdG9wOiAxMHZoO1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxufSJdfQ== */");
 
 /***/ }),
 
@@ -915,47 +933,51 @@ let GraphComponent = class GraphComponent {
     }
     ngOnInit() {
         this.getRawData();
-        this.updateChart();
     }
     updateChart() {
         var totalInMonth = 0;
         var deceasedInMonth = 0;
-        var startMonth = 'January';
+        var startMonth = 'March';
         for (var month in this.dataService.getAllData()['cases_time_series']) {
-            this.arr = [];
-            this.arr.push(this.dataService.getAllData()['cases_time_series'][month].date);
-            this.arr.push(Number(this.dataService.getAllData()['cases_time_series'][month].totalconfirmed));
-            this.confirmedData.push(this.arr);
-            this.arr = [];
-            this.arr.push(this.dataService.getAllData()['cases_time_series'][month].date);
-            this.arr.push(Number(this.dataService.getAllData()['cases_time_series'][month].totalrecovered));
-            this.recoveredData.push(this.arr);
-            this.arr = [];
-            this.arr.push(this.dataService.getAllData()['cases_time_series'][month].date);
-            this.arr.push(Number(this.dataService.getAllData()['cases_time_series'][month].totaldeceased));
-            this.deceasedData.push(this.arr);
-            this.arr = [];
-            if ((this.dataService.getAllData()['cases_time_series'][month].date).includes(startMonth)) {
-                totalInMonth += Number(this.dataService.getAllData()['cases_time_series'][month].dailyconfirmed);
-                deceasedInMonth += Number(this.dataService.getAllData()['cases_time_series'][month].dailydeceased);
-            }
-            else {
-                this.confirmedInMonths.push([startMonth, totalInMonth, deceasedInMonth]);
-                startMonth = (this.dataService.getAllData()['cases_time_series'][month].date).trim().slice(2);
-                console.log(startMonth);
-                totalInMonth = Number(this.dataService.getAllData()['cases_time_series'][month].dailyconfirmed);
-                deceasedInMonth = Number(this.dataService.getAllData()['cases_time_series'][month].dailydeceased);
+            if (!((this.dataService.getAllData()['cases_time_series'][month].date).includes("January")
+                || (this.dataService.getAllData()['cases_time_series'][month].date).includes("February"))) {
+                this.arr = [];
+                this.arr.push(this.dataService.getAllData()['cases_time_series'][month].date);
+                this.arr.push(Number(this.dataService.getAllData()['cases_time_series'][month].totalconfirmed));
+                this.confirmedData.push(this.arr);
+                this.arr = [];
+                this.arr.push(this.dataService.getAllData()['cases_time_series'][month].date);
+                this.arr.push(Number(this.dataService.getAllData()['cases_time_series'][month].totalrecovered));
+                this.recoveredData.push(this.arr);
+                this.arr = [];
+                this.arr.push(this.dataService.getAllData()['cases_time_series'][month].date);
+                this.arr.push(Number(this.dataService.getAllData()['cases_time_series'][month].totaldeceased));
+                this.deceasedData.push(this.arr);
+                this.arr = [];
+                if ((this.dataService.getAllData()['cases_time_series'][month].date).includes(startMonth)) {
+                    totalInMonth += Number(this.dataService.getAllData()['cases_time_series'][month].dailyconfirmed);
+                    deceasedInMonth += Number(this.dataService.getAllData()['cases_time_series'][month].dailydeceased);
+                }
+                else {
+                    this.confirmedInMonths.push([startMonth, totalInMonth, deceasedInMonth]);
+                    startMonth = (this.dataService.getAllData()['cases_time_series'][month].date).trim().slice(2);
+                    totalInMonth = Number(this.dataService.getAllData()['cases_time_series'][month].dailyconfirmed);
+                    deceasedInMonth = Number(this.dataService.getAllData()['cases_time_series'][month].dailydeceased);
+                }
             }
         }
         this.confirmedInMonths.push([startMonth, totalInMonth, deceasedInMonth]);
-        console.log(this.confirmedInMonths);
+        this.isDataLoaded = true;
     }
     getRawData() {
         this.service.getRawData()
             .then((res) => {
             this.data = res;
-            this.updatePieChart(this.data);
-        }).catch();
+        })
+            .then(() => { this.updatePieChart(this.data); })
+            .then(() => this.updateChart())
+            .then(() => { })
+            .catch();
     }
     updatePieChart(data) {
         //console.log(data); 
@@ -984,7 +1006,6 @@ let GraphComponent = class GraphComponent {
         this.arr.push(Number(this.totalOthers));
         this.infectionRatioByGender.push(this.arr);
         this.arr = [];
-        this.isDataLoaded = true;
     }
 };
 GraphComponent.ctorParameters = () => [
@@ -1099,6 +1120,55 @@ LoadingComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/resources/resources.component.css":
+/*!***************************************************!*\
+  !*** ./src/app/resources/resources.component.css ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Jlc291cmNlcy9yZXNvdXJjZXMuY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/resources/resources.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/resources/resources.component.ts ***!
+  \**************************************************/
+/*! exports provided: ResourcesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResourcesComponent", function() { return ResourcesComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let ResourcesComponent = class ResourcesComponent {
+    constructor() { }
+    ngOnInit() {
+        this.resourceCategory = this.category;
+        console.log(this.category);
+    }
+};
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], ResourcesComponent.prototype, "category", void 0);
+ResourcesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-resources',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./resources.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/resources/resources.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./resources.component.css */ "./src/app/resources/resources.component.css")).default]
+    })
+], ResourcesComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/state-details/state-details.component.css":
 /*!***********************************************************!*\
   !*** ./src/app/state-details/state-details.component.css ***!
@@ -1108,7 +1178,7 @@ LoadingComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("@media only screen and (max-width: 600px){\r\n    #districtTable thead tr th {\r\n        top: 5vh!important;\r\n    }\r\n}\r\n\r\n.row{\r\n    padding: 0;\r\n}\r\n\r\ntable{\r\n    table-layout: fixed;\r\n   \r\n    margin-top: 10px;\r\n    padding: 0;\r\n    word-spacing: normal;\r\n    word-break: keep-all;\r\n    \r\n}\r\n\r\n#summaryTable{\r\n    margin-top: 10vh;\r\n    margin-bottom: 10vh;\r\n}\r\n\r\n#summaryTable td{\r\n    font-size: large;\r\n}\r\n\r\n#summaryTable tbody tr td div{\r\n    background-color: #17223B;\r\n    border-radius: 8px;\r\n    height: 10vh!important;\r\n    padding: 0.5em;\r\n    height: 100%;\r\n}\r\n\r\nthead{\r\n    text-align: center;\r\n    \r\n}\r\n\r\nth{\r\n    text-align: center;\r\n    font-size: x-small;\r\n   \r\n}\r\n\r\ntbody > tr{\r\n    text-align: center;\r\n    font-size: x-small;\r\n    font-weight: 700;\r\n    line-height: 3em;\r\n    \r\n   \r\n}\r\n\r\n#districtTable thead tr th{\r\n    position: -webkit-sticky;\r\n    position: sticky;\r\n    top: 8vh;\r\n    background-color: whitesmoke;\r\n    font-size: smaller;\r\n    \r\n}\r\n\r\n#districtTable tbody tr td{\r\n    background-color: #17223B;\r\n}\r\n\r\nbutton{\r\n    margin-left: 1vw;\r\n    background-color: transparent;\r\n   float: left;\r\n    \r\n}\r\n\r\nbutton{\r\n     position: -webkit-sticky;\r\n     position: sticky;\r\n     z-index: 10000;\r\n        top:0;\r\n\r\n}\r\n\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3RhdGUtZGV0YWlscy9zdGF0ZS1kZXRhaWxzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSTtRQUNJLGtCQUFrQjtJQUN0QjtBQUNKOztBQUVBO0lBQ0ksVUFBVTtBQUNkOztBQUNBO0lBQ0ksbUJBQW1COztJQUVuQixnQkFBZ0I7SUFDaEIsVUFBVTtJQUNWLG9CQUFvQjtJQUNwQixvQkFBb0I7O0FBRXhCOztBQUNBO0lBQ0ksZ0JBQWdCO0lBQ2hCLG1CQUFtQjtBQUN2Qjs7QUFDQTtJQUNJLGdCQUFnQjtBQUNwQjs7QUFDQTtJQUNJLHlCQUF5QjtJQUN6QixrQkFBa0I7SUFDbEIsc0JBQXNCO0lBQ3RCLGNBQWM7SUFDZCxZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksa0JBQWtCOztBQUV0Qjs7QUFDQTtJQUNJLGtCQUFrQjtJQUNsQixrQkFBa0I7O0FBRXRCOztBQUNBO0lBQ0ksa0JBQWtCO0lBQ2xCLGtCQUFrQjtJQUNsQixnQkFBZ0I7SUFDaEIsZ0JBQWdCOzs7QUFHcEI7O0FBSUE7SUFDSSx3QkFBZ0I7SUFBaEIsZ0JBQWdCO0lBQ2hCLFFBQVE7SUFDUiw0QkFBNEI7SUFDNUIsa0JBQWtCOztBQUV0Qjs7QUFDQTtJQUNJLHlCQUF5QjtBQUM3Qjs7QUFDQTtJQUNJLGdCQUFnQjtJQUNoQiw2QkFBNkI7R0FDOUIsV0FBVzs7QUFFZDs7QUFFQTtLQUNLLHdCQUFnQjtLQUFoQixnQkFBZ0I7S0FDaEIsY0FBYztRQUNYLEtBQUs7O0FBRWIiLCJmaWxlIjoic3JjL2FwcC9zdGF0ZS1kZXRhaWxzL3N0YXRlLWRldGFpbHMuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNjAwcHgpe1xyXG4gICAgI2Rpc3RyaWN0VGFibGUgdGhlYWQgdHIgdGgge1xyXG4gICAgICAgIHRvcDogNXZoIWltcG9ydGFudDtcclxuICAgIH1cclxufVxyXG5cclxuLnJvd3tcclxuICAgIHBhZGRpbmc6IDA7XHJcbn1cclxudGFibGV7XHJcbiAgICB0YWJsZS1sYXlvdXQ6IGZpeGVkO1xyXG4gICBcclxuICAgIG1hcmdpbi10b3A6IDEwcHg7XHJcbiAgICBwYWRkaW5nOiAwO1xyXG4gICAgd29yZC1zcGFjaW5nOiBub3JtYWw7XHJcbiAgICB3b3JkLWJyZWFrOiBrZWVwLWFsbDtcclxuICAgIFxyXG59XHJcbiNzdW1tYXJ5VGFibGV7XHJcbiAgICBtYXJnaW4tdG9wOiAxMHZoO1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMTB2aDtcclxufVxyXG4jc3VtbWFyeVRhYmxlIHRke1xyXG4gICAgZm9udC1zaXplOiBsYXJnZTtcclxufVxyXG4jc3VtbWFyeVRhYmxlIHRib2R5IHRyIHRkIGRpdntcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMxNzIyM0I7XHJcbiAgICBib3JkZXItcmFkaXVzOiA4cHg7XHJcbiAgICBoZWlnaHQ6IDEwdmghaW1wb3J0YW50O1xyXG4gICAgcGFkZGluZzogMC41ZW07XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbn1cclxuXHJcbnRoZWFke1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgXHJcbn1cclxudGh7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBmb250LXNpemU6IHgtc21hbGw7XHJcbiAgIFxyXG59XHJcbnRib2R5ID4gdHJ7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBmb250LXNpemU6IHgtc21hbGw7XHJcbiAgICBmb250LXdlaWdodDogNzAwO1xyXG4gICAgbGluZS1oZWlnaHQ6IDNlbTtcclxuICAgIFxyXG4gICBcclxufVxyXG5cclxuXHJcblxyXG4jZGlzdHJpY3RUYWJsZSB0aGVhZCB0ciB0aHtcclxuICAgIHBvc2l0aW9uOiBzdGlja3k7XHJcbiAgICB0b3A6IDh2aDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlc21va2U7XHJcbiAgICBmb250LXNpemU6IHNtYWxsZXI7XHJcbiAgICBcclxufVxyXG4jZGlzdHJpY3RUYWJsZSB0Ym9keSB0ciB0ZHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMxNzIyM0I7XHJcbn1cclxuYnV0dG9ue1xyXG4gICAgbWFyZ2luLWxlZnQ6IDF2dztcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xyXG4gICBmbG9hdDogbGVmdDtcclxuICAgIFxyXG59XHJcblxyXG5idXR0b257XHJcbiAgICAgcG9zaXRpb246IHN0aWNreTtcclxuICAgICB6LWluZGV4OiAxMDAwMDtcclxuICAgICAgICB0b3A6MDtcclxuXHJcbn1cclxuXHJcbiJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("@media only screen and (max-width: 600px){\r\n    #districtTable thead tr th {\r\n        top: 5vh!important;\r\n    }\r\n    div.categoryContainer{\r\n       \r\n        width: -webkit-fit-content!important;\r\n       \r\n        width: -moz-fit-content!important;\r\n       \r\n        width: fit-content!important;\r\n        \r\n        \r\n    }\r\n   \r\n    #category option{\r\n        float: left!important;\r\n        padding: 0!important;\r\n        word-break: break-all!important;\r\n        white-space: nowrap!important;\r\n        \r\n    }\r\n    \r\n    \r\n}\r\n\r\n.row{\r\n    padding: 0;\r\n}\r\n\r\ntable{\r\n    table-layout: fixed;\r\n    margin-top: 10px;\r\n    padding: 0;\r\n    word-spacing: normal;\r\n    word-break: keep-all;\r\n    \r\n}\r\n\r\n#summaryTable{\r\n    margin-top: 10vh;\r\n    margin-bottom: 10vh;\r\n}\r\n\r\n#summaryTable td{\r\n    font-size: large;\r\n}\r\n\r\n#summaryTable tbody tr td div{\r\n    background-color: #17223B;\r\n    border-radius: 8px;\r\n    height: 10vh!important;\r\n    padding: 0.5em;\r\n    height: 100%;\r\n}\r\n\r\nthead{\r\n    text-align: center;\r\n    \r\n}\r\n\r\nth{\r\n    text-align: center;\r\n    font-size: x-small;\r\n   \r\n}\r\n\r\ntbody > tr{\r\n    text-align: center;\r\n    font-size: x-small;\r\n    font-weight: 700;\r\n    line-height: 3em;\r\n    \r\n   \r\n}\r\n\r\n#districtTable thead tr th{\r\n    position: -webkit-sticky;\r\n    position: sticky;\r\n    top: 8vh;\r\n    background-color: whitesmoke;\r\n    font-size: smaller;\r\n    \r\n}\r\n\r\n#districtTable tbody tr td{\r\n    background-color: #17223B;\r\n}\r\n\r\n#districtTable tbody tr td div{\r\n      padding: 1px;\r\n      width: 3%;\r\n}\r\n\r\n#districtTable tbody tr:hover{\r\n    background-color: aliceblue;\r\n   \r\n}\r\n\r\nbutton{\r\n    margin-left: 1vw;\r\n    background-color: transparent;\r\n   float: left;\r\n    \r\n}\r\n\r\nbutton{\r\n     position: -webkit-sticky;\r\n     position: sticky;\r\n     z-index: 10000;\r\n        top:0;\r\n\r\n}\r\n\r\ndiv.categoryContainer{\r\n    width: 52%;\r\n}\r\n\r\n#category option{\r\n    font-size: xx-small;\r\n    \r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3RhdGUtZGV0YWlscy9zdGF0ZS1kZXRhaWxzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSTtRQUNJLGtCQUFrQjtJQUN0QjtJQUNBOztRQUVJLG9DQUE0Qjs7UUFBNUIsaUNBQTRCOztRQUE1Qiw0QkFBNEI7OztJQUdoQzs7SUFFQTtRQUNJLHFCQUFxQjtRQUNyQixvQkFBb0I7UUFDcEIsK0JBQStCO1FBQy9CLDZCQUE2Qjs7SUFFakM7OztBQUdKOztBQUVBO0lBQ0ksVUFBVTtBQUNkOztBQUNBO0lBQ0ksbUJBQW1CO0lBQ25CLGdCQUFnQjtJQUNoQixVQUFVO0lBQ1Ysb0JBQW9CO0lBQ3BCLG9CQUFvQjs7QUFFeEI7O0FBQ0E7SUFDSSxnQkFBZ0I7SUFDaEIsbUJBQW1CO0FBQ3ZCOztBQUNBO0lBQ0ksZ0JBQWdCO0FBQ3BCOztBQUNBO0lBQ0kseUJBQXlCO0lBQ3pCLGtCQUFrQjtJQUNsQixzQkFBc0I7SUFDdEIsY0FBYztJQUNkLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxrQkFBa0I7O0FBRXRCOztBQUNBO0lBQ0ksa0JBQWtCO0lBQ2xCLGtCQUFrQjs7QUFFdEI7O0FBQ0E7SUFDSSxrQkFBa0I7SUFDbEIsa0JBQWtCO0lBQ2xCLGdCQUFnQjtJQUNoQixnQkFBZ0I7OztBQUdwQjs7QUFJQTtJQUNJLHdCQUFnQjtJQUFoQixnQkFBZ0I7SUFDaEIsUUFBUTtJQUNSLDRCQUE0QjtJQUM1QixrQkFBa0I7O0FBRXRCOztBQUNBO0lBQ0kseUJBQXlCO0FBQzdCOztBQUVBO01BQ00sWUFBWTtNQUNaLFNBQVM7QUFDZjs7QUFDQTtJQUNJLDJCQUEyQjs7QUFFL0I7O0FBQ0E7SUFDSSxnQkFBZ0I7SUFDaEIsNkJBQTZCO0dBQzlCLFdBQVc7O0FBRWQ7O0FBRUE7S0FDSyx3QkFBZ0I7S0FBaEIsZ0JBQWdCO0tBQ2hCLGNBQWM7UUFDWCxLQUFLOztBQUViOztBQUVBO0lBQ0ksVUFBVTtBQUNkOztBQUVBO0lBQ0ksbUJBQW1COztBQUV2QiIsImZpbGUiOiJzcmMvYXBwL3N0YXRlLWRldGFpbHMvc3RhdGUtZGV0YWlscy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2MDBweCl7XHJcbiAgICAjZGlzdHJpY3RUYWJsZSB0aGVhZCB0ciB0aCB7XHJcbiAgICAgICAgdG9wOiA1dmghaW1wb3J0YW50O1xyXG4gICAgfVxyXG4gICAgZGl2LmNhdGVnb3J5Q29udGFpbmVye1xyXG4gICAgICAgXHJcbiAgICAgICAgd2lkdGg6IGZpdC1jb250ZW50IWltcG9ydGFudDtcclxuICAgICAgICBcclxuICAgICAgICBcclxuICAgIH1cclxuICAgXHJcbiAgICAjY2F0ZWdvcnkgb3B0aW9ue1xyXG4gICAgICAgIGZsb2F0OiBsZWZ0IWltcG9ydGFudDtcclxuICAgICAgICBwYWRkaW5nOiAwIWltcG9ydGFudDtcclxuICAgICAgICB3b3JkLWJyZWFrOiBicmVhay1hbGwhaW1wb3J0YW50O1xyXG4gICAgICAgIHdoaXRlLXNwYWNlOiBub3dyYXAhaW1wb3J0YW50O1xyXG4gICAgICAgIFxyXG4gICAgfVxyXG4gICAgXHJcbiAgICBcclxufVxyXG5cclxuLnJvd3tcclxuICAgIHBhZGRpbmc6IDA7XHJcbn1cclxudGFibGV7XHJcbiAgICB0YWJsZS1sYXlvdXQ6IGZpeGVkO1xyXG4gICAgbWFyZ2luLXRvcDogMTBweDtcclxuICAgIHBhZGRpbmc6IDA7XHJcbiAgICB3b3JkLXNwYWNpbmc6IG5vcm1hbDtcclxuICAgIHdvcmQtYnJlYWs6IGtlZXAtYWxsO1xyXG4gICAgXHJcbn1cclxuI3N1bW1hcnlUYWJsZXtcclxuICAgIG1hcmdpbi10b3A6IDEwdmg7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAxMHZoO1xyXG59XHJcbiNzdW1tYXJ5VGFibGUgdGR7XHJcbiAgICBmb250LXNpemU6IGxhcmdlO1xyXG59XHJcbiNzdW1tYXJ5VGFibGUgdGJvZHkgdHIgdGQgZGl2e1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzE3MjIzQjtcclxuICAgIGJvcmRlci1yYWRpdXM6IDhweDtcclxuICAgIGhlaWdodDogMTB2aCFpbXBvcnRhbnQ7XHJcbiAgICBwYWRkaW5nOiAwLjVlbTtcclxuICAgIGhlaWdodDogMTAwJTtcclxufVxyXG5cclxudGhlYWR7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBcclxufVxyXG50aHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGZvbnQtc2l6ZTogeC1zbWFsbDtcclxuICAgXHJcbn1cclxudGJvZHkgPiB0cntcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGZvbnQtc2l6ZTogeC1zbWFsbDtcclxuICAgIGZvbnQtd2VpZ2h0OiA3MDA7XHJcbiAgICBsaW5lLWhlaWdodDogM2VtO1xyXG4gICAgXHJcbiAgIFxyXG59XHJcblxyXG5cclxuXHJcbiNkaXN0cmljdFRhYmxlIHRoZWFkIHRyIHRoe1xyXG4gICAgcG9zaXRpb246IHN0aWNreTtcclxuICAgIHRvcDogOHZoO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGVzbW9rZTtcclxuICAgIGZvbnQtc2l6ZTogc21hbGxlcjtcclxuICAgIFxyXG59XHJcbiNkaXN0cmljdFRhYmxlIHRib2R5IHRyIHRke1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzE3MjIzQjtcclxufVxyXG5cclxuI2Rpc3RyaWN0VGFibGUgdGJvZHkgdHIgdGQgZGl2e1xyXG4gICAgICBwYWRkaW5nOiAxcHg7XHJcbiAgICAgIHdpZHRoOiAzJTtcclxufVxyXG4jZGlzdHJpY3RUYWJsZSB0Ym9keSB0cjpob3ZlcntcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGFsaWNlYmx1ZTtcclxuICAgXHJcbn1cclxuYnV0dG9ue1xyXG4gICAgbWFyZ2luLWxlZnQ6IDF2dztcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xyXG4gICBmbG9hdDogbGVmdDtcclxuICAgIFxyXG59XHJcblxyXG5idXR0b257XHJcbiAgICAgcG9zaXRpb246IHN0aWNreTtcclxuICAgICB6LWluZGV4OiAxMDAwMDtcclxuICAgICAgICB0b3A6MDtcclxuXHJcbn1cclxuXHJcbmRpdi5jYXRlZ29yeUNvbnRhaW5lcntcclxuICAgIHdpZHRoOiA1MiU7XHJcbn1cclxuXHJcbiNjYXRlZ29yeSBvcHRpb257XHJcbiAgICBmb250LXNpemU6IHh4LXNtYWxsO1xyXG4gICAgXHJcbn0iXX0= */");
 
 /***/ }),
 
@@ -1125,68 +1195,84 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _data_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../data/data.service */ "./src/app/data/data.service.ts");
+/* harmony import */ var _state_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./state.service */ "./src/app/state-details/state.service.ts");
+
 
 
 
 let StateDetailsComponent = class StateDetailsComponent {
-    constructor(dataService) {
+    constructor(dataService, service) {
         this.dataService = dataService;
+        this.service = service;
+        this.isDataLoaded = false;
+        this.resourcesCategory = [];
+        this.resources = [];
+        this.districtZone = [];
         this.stateDistrictData = [];
         this.total = [];
         this.districtDataTemp = [];
-        //this.showData();
-        this.showDataTemp();
     }
     ngOnInit() {
+        this.stateDetail = this.dataService.getStateName();
+        this.state = this.stateDetail.name;
+        this.getZoneData();
     }
     showDataTemp() {
-        var stateDetail = this.dataService.getStateName();
-        this.state = stateDetail.name;
-        // console.log("aaaaaaaaaa"+ stateName.name);
-        this.total.push({ confirmed: stateDetail.confirmed, active: stateDetail.active, recovered: stateDetail.recover,
-            deceased: stateDetail.deceased, deltaConfirmed: stateDetail.deltaConfirmed,
-            deltaDeaths: stateDetail.deltaDeaths, deltaRecovered: stateDetail.deltaRecovered, lastUpdated: stateDetail.lastUpdated });
+        this.total.push({ confirmed: this.stateDetail.confirmed, active: this.stateDetail.active, recovered: this.stateDetail.recover,
+            deceased: this.stateDetail.deceased, deltaConfirmed: this.stateDetail.deltaConfirmed,
+            deltaDeaths: this.stateDetail.deltaDeaths, deltaRecovered: this.stateDetail.deltaRecovered, lastUpdated: this.stateDetail.lastUpdated });
         var stateDate = this.dataService.getData();
-        //console.log(stateDate[this.state]);
+        var zone;
         for (var district in stateDate[this.state].districtData) {
-            //console.log(stateDate[this.state].districtData[district].confirmed);
+            this.districtZone.forEach(element => {
+                if (element.district == district) {
+                    zone = element.zone;
+                }
+            });
             this.districtDataTemp.push({ name: district, confirmed: stateDate[this.state].districtData[district].confirmed,
                 active: stateDate[this.state].districtData[district].active,
                 recovered: stateDate[this.state].districtData[district].recovered,
                 deceased: stateDate[this.state].districtData[district].deceased,
                 deltaConfirmed: stateDate[this.state].districtData[district].delta.confirmed,
                 deltaDeaths: stateDate[this.state].districtData[district].delta.deceased,
-                deltaRecovered: stateDate[this.state].districtData[district].delta.recovered });
+                deltaRecovered: stateDate[this.state].districtData[district].delta.recovered,
+                zone: zone });
         }
-        //  stateDate[this.state].forEach(district => {
-        //    console.log(district);
-        //  });
     }
-    showData() {
-        // this.state = this.dataService.getStateName();
-        // var stateData = this.dataService.getData()[this.dataService.getStateName()]
-        // for(var district in stateData.districtData){
-        //   this.confirmed += stateData.districtData[district].confirmed;
-        //   this.active += stateData.districtData[district].active;
-        //   this.recovered += stateData.districtData[district].recovered;
-        //   this.deceased += stateData.districtData[district].deceased;
-        //   this.stateDistrictData.push({name : district, confirmed: stateData.districtData[district].confirmed, active : stateData.districtData[district].active, recover: stateData.districtData[district].recovered, deceased : stateData.districtData[district].deceased})
-        // }
-        // var op = 0.1;
-        // var box = document.getElementById('contentBox');
-        // console.log(box);
-        // var timer = setInterval(()=>{
-        //     if(op>1){
-        //       clearInterval(timer);
-        //     }
-        //       box.style.opacity = String(op);
-        //       box.style.filter = 'alpha(opacity=' + op * 100 + ")";
-        //       op += op * 0.1;
-        // },20);
+    //get zone data
+    getZoneData() {
+        this.service.getZoneData()
+            .then((res) => {
+            res['zones'].forEach(element => {
+                if (element.state == this.state) {
+                    this.districtZone.push({ district: element.district, zone: element.zone.toLowerCase() });
+                }
+            });
+        })
+            .then(() => this.showDataTemp())
+            .then(() => this.getResources())
+            .then(() => { this.isDataLoaded = true; })
+            .catch((error) => { console.log(error); });
+    }
+    getResources() {
+        this.service.getResources()
+            .then((res) => {
+            res['resources'].forEach(element => {
+                if (element.state == this.state) {
+                    if (!(this.resourcesCategory.includes(element.category))) {
+                        this.resourcesCategory.push(element.category);
+                    }
+                    this.resources.push({ category: element.category, city: element.city, descriptionandorserviceprovided: element.descriptionandorserviceprovided,
+                        nameoftheorganisation: element.nameoftheorganisation, phonenumber: element.phonenumber });
+                }
+            });
+        })
+            .catch();
     }
 };
 StateDetailsComponent.ctorParameters = () => [
-    { type: _data_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"] }
+    { type: _data_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"] },
+    { type: _state_service__WEBPACK_IMPORTED_MODULE_3__["StateService"] }
 ];
 StateDetailsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1195,6 +1281,54 @@ StateDetailsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./state-details.component.css */ "./src/app/state-details/state-details.component.css")).default]
     })
 ], StateDetailsComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/state-details/state.service.ts":
+/*!************************************************!*\
+  !*** ./src/app/state-details/state.service.ts ***!
+  \************************************************/
+/*! exports provided: StateService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StateService", function() { return StateService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+
+
+
+
+let StateService = class StateService {
+    constructor(http) {
+        this.http = http;
+    }
+    getZoneData() {
+        return this.http.get(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].zoneDataUrl)
+            .toPromise()
+            .then(res => { return res; })
+            .catch((error) => { return error; });
+    }
+    getResources() {
+        return this.http.get(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].resourcesUrl)
+            .toPromise()
+            .then((resources) => { return resources; })
+            .catch();
+    }
+};
+StateService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+];
+StateService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], StateService);
 
 
 
@@ -1219,7 +1353,9 @@ const environment = {
     production: false,
     stateDistrictDataurl: 'https://api.covid19india.org/state_district_wise.json',
     dataUrl: 'https://api.covid19india.org/data.json',
-    rawDataUrl: 'https://api.covid19india.org/raw_data.json'
+    rawDataUrl: 'https://api.covid19india.org/raw_data.json',
+    zoneDataUrl: 'https://api.covid19india.org/zones.json',
+    resourcesUrl: 'https://api.covid19india.org/resources/resources.json'
 };
 /*
  * In development mode, for easier debugging, you can ignore zone related error

@@ -20,7 +20,7 @@ div.chartDiv{
 }
 
 div.chartContainer{
-  background-color: #17223B;
+  background-color: transparent;
  text-align: center;
  align-items: center;
  border-radius: 5px;

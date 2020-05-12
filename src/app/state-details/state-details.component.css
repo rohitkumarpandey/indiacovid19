@@ -2,6 +2,22 @@
     #districtTable thead tr th {
         top: 5vh!important;
     }
+    div.categoryContainer{
+       
+        width: fit-content!important;
+        
+        
+    }
+   
+    #category option{
+        float: left!important;
+        padding: 0!important;
+        word-break: break-all!important;
+        white-space: nowrap!important;
+        
+    }
+    
+    
 }
 
 .row{
@@ -9,7 +25,6 @@
 }
 table{
     table-layout: fixed;
-   
     margin-top: 10px;
     padding: 0;
     word-spacing: normal;
@@ -61,6 +76,15 @@ tbody > tr{
 #districtTable tbody tr td{
     background-color: #17223B;
 }
+
+#districtTable tbody tr td div{
+      padding: 1px;
+      width: 3%;
+}
+#districtTable tbody tr:hover{
+    background-color: aliceblue;
+   
+}
 button{
     margin-left: 1vw;
     background-color: transparent;
@@ -75,3 +99,11 @@ button{
 
 }
 
+div.categoryContainer{
+    width: 52%;
+}
+
+#category option{
+    font-size: xx-small;
+    
+}

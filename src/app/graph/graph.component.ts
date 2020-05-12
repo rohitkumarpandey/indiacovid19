@@ -82,14 +82,17 @@ export class GraphComponent implements OnInit {
 
   ngOnInit() {
     this.getRawData();
-    this.updateChart();
+    
        }
 
   updateChart(){
     var totalInMonth:number = 0;
     var deceasedInMonth:number = 0;
-    var startMonth  = 'January';
+    var startMonth  = 'March';
+    
     for(var month in this.dataService.getAllData()['cases_time_series']){
+      if(!((this.dataService.getAllData()['cases_time_series'][month].date).includes("January")
+       || (this.dataService.getAllData()['cases_time_series'][month].date).includes("February"))){
             this.arr = [];
             
             this.arr.push(this.dataService.getAllData()['cases_time_series'][month].date);
@@ -114,7 +117,6 @@ export class GraphComponent implements OnInit {
             }else{
               this.confirmedInMonths.push([startMonth, totalInMonth, deceasedInMonth]);
               startMonth = (this.dataService.getAllData()['cases_time_series'][month].date).trim().slice(2);
-              console.log(startMonth);
               totalInMonth = Number(this.dataService.getAllData()['cases_time_series'][month].dailyconfirmed);
               deceasedInMonth =  Number(this.dataService.getAllData()['cases_time_series'][month].dailydeceased);
             }
@@ -122,8 +124,11 @@ export class GraphComponent implements OnInit {
             
 
     }
+  }
+
     this.confirmedInMonths.push([startMonth, totalInMonth, deceasedInMonth]);
-    console.log(this.confirmedInMonths);
+    this.isDataLoaded = true;
+    
     
   }
 
@@ -132,9 +137,11 @@ export class GraphComponent implements OnInit {
     .then((res)=>{
       
       this.data = res;
-      
-     this.updatePieChart(this.data);
-    }).catch();
+    })
+    .then(()=>{this.updatePieChart(this.data);})
+    .then(()=>this.updateChart())
+    .then(()=> {})
+    .catch();
 
     
 
@@ -169,7 +176,7 @@ export class GraphComponent implements OnInit {
         this.arr.push(Number(this.totalOthers));
         this.infectionRatioByGender.push(this.arr);
        this.arr = [];
-       this.isDataLoaded = true;
+       
         
       
   }

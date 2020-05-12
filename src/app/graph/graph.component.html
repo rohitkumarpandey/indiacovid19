@@ -3,22 +3,22 @@
 
 <app-loading  *ngIf="!isDataLoaded" ></app-loading>
 <div class="row chartDiv" *ngIf="isDataLoaded">
- <div class=" container chartContainer" *ngIf="isDataLoaded"> 
+ <div class=" container chartContainer" > 
     <label style="color: orangered;">Confirmed Cases Over Months</label>
-<google-chart  [width]="300" [height]="180"  type="LineChart" [data]="confirmedData"  [options]="confirmedOptions">
+<google-chart  [width]="320" [height]="200"  type="LineChart" [data]="confirmedData"  [options]="confirmedOptions">
 </google-chart>
 </div>
 
-<div class=" container chartContainer" *ngIf="isDataLoaded"> 
-   <label style="color: green;">People Recovered</label>
- <google-chart  [width]="300" [height]="180" type="LineChart" [data]="recoveredData"  [options]="recoveredOptions">
+<div class=" container chartContainer" > 
+   <label style="color: forestgreen;">People Recovered</label>
+ <google-chart  [width]="320" [height]="200" type="LineChart" [data]="recoveredData"  [options]="recoveredOptions">
 </google-chart>
 </div>
 
 
-<div class=" container chartContainer" *ngIf="isDataLoaded"> 
+<div class=" container chartContainer"> 
    <label style="color: gainsboro;">Deceased People</label>
-<google-chart   [width]="300" [height]="180" type="LineChart" [data]="deceasedData"  [options]="deceasedOptions">
+<google-chart   [width]="320" [height]="200" type="LineChart" [data]="deceasedData"  [options]="deceasedOptions">
 </google-chart>
 </div>
 
@@ -28,9 +28,9 @@
 </div>
 <br>
 
-<div class="row pieChartDiv">
+<div class="row pieChartDiv" *ngIf="isDataLoaded">
 
-   <div class="container chartContainer" *ngIf="isDataLoaded">
+   <div class="container chartContainer" >
       <label style="color: gainsboro;">Confirmed Cases in Months</label>
 
      
@@ -40,15 +40,14 @@
          [data]="confirmedInMonths"
          
          [options] = "confirmedInMonthsOptions"
-         width="300"   
-         height="180">
+         [width]="320" [height]="200">
       </google-chart>
       
       </div>
 
 
    
-   <div class="container chartContainer" *ngIf="isDataLoaded">
+   <div class="container chartContainer" >
       <label style="color: gainsboro;">Infection Ratio by Gender</label>
 
       <google-chart 
@@ -56,8 +55,7 @@
          type="PieChart"
          [data]="infectionRatioByGender"
          [options] = "infectionRatioByGenderOptions"
-         width="300"   
-         height="180">
+         [width]="320" [height]="200">
       </google-chart>
       
       </div>
