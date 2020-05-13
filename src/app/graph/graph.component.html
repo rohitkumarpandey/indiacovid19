@@ -31,14 +31,13 @@
 <div class="row pieChartDiv" *ngIf="isDataLoaded">
 
    <div class="container chartContainer" >
-      <label style="color: gainsboro;">Confirmed Cases in Months</label>
+      <label style="color: gainsboro;">Confirmed & Deceased Cases in Months</label>
 
      
 
       <google-chart 
          type="ColumnChart"
          [data]="confirmedInMonths"
-         
          [options] = "confirmedInMonthsOptions"
          [width]="320" [height]="200">
       </google-chart>

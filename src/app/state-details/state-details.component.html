@@ -51,9 +51,11 @@
 
 <div class="container categoryContainer"  *ngIf="isDataLoaded">
     <div class="form-group">
-        <select  class="form-control" id="category" >
+        <select [(ngModel)]="selectedCategory" class="form-control" id="category" >
+            <option [value]="Resources" disabled style="background-color: grey;">Resources</option>
         <option *ngFor='let category of resourcesCategory' [value]="category">{{category}}</option>
     </select>
 </div>
-<!-- <app-resources [category]="selectedCategory" *ngIf="!electedCategory"></app-resources> -->
+
+<app-resources [state] = "state" [category]="selectedCategory" *ngIf="selectedCategory" ></app-resources>
 </div>

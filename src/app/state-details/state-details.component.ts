@@ -9,7 +9,7 @@ import { StateService } from './state.service';
 })
 export class StateDetailsComponent implements OnInit {
   isDataLoaded : boolean = false;
-  
+  selectedCategory : string;
   stateDetail;
   state:string;
   resourcesCategory = [];
@@ -30,6 +30,8 @@ export class StateDetailsComponent implements OnInit {
     this.state = this.stateDetail.name;
     
     this.getZoneData();
+
+   
   }
 
   showDataTemp(){
@@ -95,8 +97,8 @@ getResources(){
         if(!(this.resourcesCategory.includes(element.category))){
            this.resourcesCategory.push( element.category);
         }
-        this.resources.push({category:element.category, city : element.city,descriptionandorserviceprovided :element.descriptionandorserviceprovided,
-           nameoftheorganisation : element.nameoftheorganisation, phonenumber : element.phonenumber})
+        // this.resources.push({category:element.category, city : element.city,descriptionandorserviceprovided :element.descriptionandorserviceprovided,
+        //    nameoftheorganisation : element.nameoftheorganisation, phonenumber : element.phonenumber})
       }
     });
     

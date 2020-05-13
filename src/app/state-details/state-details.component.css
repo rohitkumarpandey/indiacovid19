@@ -73,6 +73,10 @@ tbody > tr{
     font-size: smaller;
     
 }
+#districtTable tbody tr:hover{
+    background-color: whitesmoke!important;
+    color: cadetblue;
+}
 #districtTable tbody tr td{
     background-color: #17223B;
 }
@@ -89,20 +93,21 @@ button{
     margin-left: 1vw;
     background-color: transparent;
    float: left;
+   position: sticky;
+     z-index: 10000;
+        top:0;
     
 }
 
-button{
-     position: sticky;
-     z-index: 10000;
-        top:0;
 
-}
 
 div.categoryContainer{
     width: 52%;
 }
-
+#category{
+    background-color: #1e272c;
+    color: cadetblue;
+}
 #category option{
     font-size: xx-small;
     

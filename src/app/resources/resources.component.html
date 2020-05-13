@@ -1,2 +1,18 @@
-<p>resources works!</p>
-<p>{{resourceCategory}}</p>
+<div id="resourcesContainer"class="container-fluid">
+    <table class="table table-condensed" >
+        <tbody >
+        <tr *ngFor="let r of resources"> 
+        <div class="container-fluid resource">
+            <h5>{{r.city}}</h5>
+            
+            <div class="container-fluid resourceDetail">
+                <h6>{{r.nameoftheorganisation}}</h6>
+                
+                <p>{{r.descriptionandorserviceprovided}}</p>
+                <label>{{r.phonenumber}}</label>
+            </div>
+        </div>
+        </tr>
+    </tbody>
+    </table>
+</div>

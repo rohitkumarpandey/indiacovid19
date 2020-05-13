@@ -111,7 +111,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n<div id=\"label\" class=\"row\" style=\"position: sticky;top: 15vh; z-index : 10000; background-color: #282C35;\"><label>INDIA COVID-19 Statistics</label></div>\n\n<app-loading  *ngIf=\"!isDataLoaded\" ></app-loading>\n<div class=\"row chartDiv\" *ngIf=\"isDataLoaded\">\n <div class=\" container chartContainer\" > \n    <label style=\"color: orangered;\">Confirmed Cases Over Months</label>\n<google-chart  [width]=\"320\" [height]=\"200\"  type=\"LineChart\" [data]=\"confirmedData\"  [options]=\"confirmedOptions\">\n</google-chart>\n</div>\n\n<div class=\" container chartContainer\" > \n   <label style=\"color: forestgreen;\">People Recovered</label>\n <google-chart  [width]=\"320\" [height]=\"200\" type=\"LineChart\" [data]=\"recoveredData\"  [options]=\"recoveredOptions\">\n</google-chart>\n</div>\n\n\n<div class=\" container chartContainer\"> \n   <label style=\"color: gainsboro;\">Deceased People</label>\n<google-chart   [width]=\"320\" [height]=\"200\" type=\"LineChart\" [data]=\"deceasedData\"  [options]=\"deceasedOptions\">\n</google-chart>\n</div>\n\n\n\n\n</div>\n<br>\n\n<div class=\"row pieChartDiv\" *ngIf=\"isDataLoaded\">\n\n   <div class=\"container chartContainer\" >\n      <label style=\"color: gainsboro;\">Confirmed Cases in Months</label>\n\n     \n\n      <google-chart \n         type=\"ColumnChart\"\n         [data]=\"confirmedInMonths\"\n         \n         [options] = \"confirmedInMonthsOptions\"\n         [width]=\"320\" [height]=\"200\">\n      </google-chart>\n      \n      </div>\n\n\n   \n   <div class=\"container chartContainer\" >\n      <label style=\"color: gainsboro;\">Infection Ratio by Gender</label>\n\n      <google-chart \n      \n         type=\"PieChart\"\n         [data]=\"infectionRatioByGender\"\n         [options] = \"infectionRatioByGenderOptions\"\n         [width]=\"320\" [height]=\"200\">\n      </google-chart>\n      \n      </div>\n\n\n    \n\n     \n</div>\n\n\n\n";
+    __webpack_exports__["default"] = "\n<div id=\"label\" class=\"row\" style=\"position: sticky;top: 15vh; z-index : 10000; background-color: #282C35;\"><label>INDIA COVID-19 Statistics</label></div>\n\n<app-loading  *ngIf=\"!isDataLoaded\" ></app-loading>\n<div class=\"row chartDiv\" *ngIf=\"isDataLoaded\">\n <div class=\" container chartContainer\" > \n    <label style=\"color: orangered;\">Confirmed Cases Over Months</label>\n<google-chart  [width]=\"320\" [height]=\"200\"  type=\"LineChart\" [data]=\"confirmedData\"  [options]=\"confirmedOptions\">\n</google-chart>\n</div>\n\n<div class=\" container chartContainer\" > \n   <label style=\"color: forestgreen;\">People Recovered</label>\n <google-chart  [width]=\"320\" [height]=\"200\" type=\"LineChart\" [data]=\"recoveredData\"  [options]=\"recoveredOptions\">\n</google-chart>\n</div>\n\n\n<div class=\" container chartContainer\"> \n   <label style=\"color: gainsboro;\">Deceased People</label>\n<google-chart   [width]=\"320\" [height]=\"200\" type=\"LineChart\" [data]=\"deceasedData\"  [options]=\"deceasedOptions\">\n</google-chart>\n</div>\n\n\n\n\n</div>\n<br>\n\n<div class=\"row pieChartDiv\" *ngIf=\"isDataLoaded\">\n\n   <div class=\"container chartContainer\" >\n      <label style=\"color: gainsboro;\">Confirmed & Deceased Cases in Months</label>\n\n     \n\n      <google-chart \n         type=\"ColumnChart\"\n         [data]=\"confirmedInMonths\"\n         [options] = \"confirmedInMonthsOptions\"\n         [width]=\"320\" [height]=\"200\">\n      </google-chart>\n      \n      </div>\n\n\n   \n   <div class=\"container chartContainer\" >\n      <label style=\"color: gainsboro;\">Infection Ratio by Gender</label>\n\n      <google-chart \n      \n         type=\"PieChart\"\n         [data]=\"infectionRatioByGender\"\n         [options] = \"infectionRatioByGenderOptions\"\n         [width]=\"320\" [height]=\"200\">\n      </google-chart>\n      \n      </div>\n\n\n    \n\n     \n</div>\n\n\n\n";
     /***/
   },
 
@@ -151,7 +151,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<p>resources works!</p>\n<p>{{resourceCategory}}</p>\n";
+    __webpack_exports__["default"] = "<div id=\"resourcesContainer\"class=\"container-fluid\">\n    <table class=\"table table-condensed\" >\n        <tbody >\n        <tr *ngFor=\"let r of resources\"> \n        <div class=\"container-fluid resource\">\n            <h5>{{r.city}}</h5>\n            \n            <div class=\"container-fluid resourceDetail\">\n                <h6>{{r.nameoftheorganisation}}</h6>\n                \n                <p>{{r.descriptionandorserviceprovided}}</p>\n                <label>{{r.phonenumber}}</label>\n            </div>\n        </div>\n        </tr>\n    </tbody>\n    </table>\n</div>\n";
     /***/
   },
 
@@ -171,7 +171,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n<app-loading  *ngIf=\"!isDataLoaded\" ></app-loading>\n<div class=\"row\" *ngIf=\"isDataLoaded\">\n<button class=\"btn btn-primary\"><i class=\"fa fa-chevron-left\" [routerLink]=\"['/home']\" ></i></button>\n</div>\n<br>\n<div id='contentBox' class=\"row col-md-6 col-md-offset-3\" *ngIf=\"isDataLoaded\">\n    <label class=\"text-danger\" style=\"font-size: xx-large; float: left; color: orangered;\">{{state}}</label>\n    <table id=\"summaryTable\" class=\"table table-condensed w-auto\" style=\"width: 100%;\">\n        <thead>\n            <tr>\n            <th style=\"color: orangered;\" >Confirmed</th>\n            <th style=\"color: royalblue;\">Active</th>\n            <th style=\"color: green;\" >Recovered</th>\n            <th style=\"color: gray;\">Deceased</th>\n        </tr>\n        </thead>\n        <tbody *ngFor=\"let t of total\">\n            <tr >\n                <td style=\"color: orangered;\"><div>{{t.confirmed}}<p *ngIf=\"t.deltaConfirmed!=0\" style=\"font-size: small;\">&uarr;{{t.deltaConfirmed}}</p></div></td>\n                <td style=\"color: royalblue;\" ><div >{{t.active}}</div></td>\n                <td style=\"color: green;\" ><div>{{t.recovered}}<p *ngIf=\"t.deltaRecovered!=0\" style=\"font-size: small;\">&uarr;{{t.deltaRecovered}}</p></div></td>\n                <td style=\"color: gray;\"><div>{{t.deceased}}<p *ngIf=\"t.deltaDeaths!=0\" style=\"font-size: small;\">&uarr;{{t.deltaDeaths}}</p></div></td>\n            </tr>\n            <tr>\n                <td style=\"font-size: small;\" colspan=4>Last updated at: {{t.lastUpdated}}</td>\n            </tr>\n        </tbody>\n    </table>\n    <table class=\"table table-condensed table-hover w-auto\" style=\"width: 100%;\" id=\"districtTable\">\n        <thead>\n            <tr>\n            <th style=\"color: black;\">District</th>\n            <th style=\"color: orangered;\">Confirmed</th>\n            <th style=\"color: royalblue;\">Active</th>\n            <th style=\"color: green;\">Recovered</th>\n            <th style=\"color: grey;\">Deceased</th>\n        </tr>\n        </thead>\n        <tbody *ngFor=\"let district of districtDataTemp\">\n            <tr >\n                <td  style=\"text-align: left;\"><div [style.background] = 'district.zone'>&nbsp;{{district.name}}</div></td>\n                <td style=\"text-align: right;\"><strong *ngIf=\"district.deltaConfirmed !='0'\" style=\"font-size: small; color: orangered;\">&uarr;{{district.deltaConfirmed}}&nbsp;</strong>{{district.confirmed}}</td>\n                <td>{{district.active}}</td>\n                <td style=\"text-align: right;\"><strong *ngIf=\"district.deltaRecovered !='0'\" style=\"font-size: small;  color: green;\">&uarr;{{district.deltaRecovered}}&nbsp;</strong>{{district.recovered}}</td>\n                <td style=\"text-align: right;\"><strong *ngIf=\"district.deltaDeaths !='0'\" style=\"font-size: small; color: gray;\">&uarr;{{district.deltaDeaths}}&nbsp;</strong>{{district.deceased}}</td>\n            </tr>\n        </tbody>\n    </table>\n</div>\n\n<div class=\"container categoryContainer\"  *ngIf=\"isDataLoaded\">\n    <div class=\"form-group\">\n        <select  class=\"form-control\" id=\"category\" >\n        <option *ngFor='let category of resourcesCategory' [value]=\"category\">{{category}}</option>\n    </select>\n</div>\n<!-- <app-resources [category]=\"selectedCategory\" *ngIf=\"!electedCategory\"></app-resources> -->\n</div>\n";
+    __webpack_exports__["default"] = "\n<app-loading  *ngIf=\"!isDataLoaded\" ></app-loading>\n<div class=\"row\" *ngIf=\"isDataLoaded\">\n<button class=\"btn btn-primary\"><i class=\"fa fa-chevron-left\" [routerLink]=\"['/home']\" ></i></button>\n</div>\n<br>\n<div id='contentBox' class=\"row col-md-6 col-md-offset-3\" *ngIf=\"isDataLoaded\">\n    <label class=\"text-danger\" style=\"font-size: xx-large; float: left; color: orangered;\">{{state}}</label>\n    <table id=\"summaryTable\" class=\"table table-condensed w-auto\" style=\"width: 100%;\">\n        <thead>\n            <tr>\n            <th style=\"color: orangered;\" >Confirmed</th>\n            <th style=\"color: royalblue;\">Active</th>\n            <th style=\"color: green;\" >Recovered</th>\n            <th style=\"color: gray;\">Deceased</th>\n        </tr>\n        </thead>\n        <tbody *ngFor=\"let t of total\">\n            <tr >\n                <td style=\"color: orangered;\"><div>{{t.confirmed}}<p *ngIf=\"t.deltaConfirmed!=0\" style=\"font-size: small;\">&uarr;{{t.deltaConfirmed}}</p></div></td>\n                <td style=\"color: royalblue;\" ><div >{{t.active}}</div></td>\n                <td style=\"color: green;\" ><div>{{t.recovered}}<p *ngIf=\"t.deltaRecovered!=0\" style=\"font-size: small;\">&uarr;{{t.deltaRecovered}}</p></div></td>\n                <td style=\"color: gray;\"><div>{{t.deceased}}<p *ngIf=\"t.deltaDeaths!=0\" style=\"font-size: small;\">&uarr;{{t.deltaDeaths}}</p></div></td>\n            </tr>\n            <tr>\n                <td style=\"font-size: small;\" colspan=4>Last updated at: {{t.lastUpdated}}</td>\n            </tr>\n        </tbody>\n    </table>\n    <table class=\"table table-condensed table-hover w-auto\" style=\"width: 100%;\" id=\"districtTable\">\n        <thead>\n            <tr>\n            <th style=\"color: black;\">District</th>\n            <th style=\"color: orangered;\">Confirmed</th>\n            <th style=\"color: royalblue;\">Active</th>\n            <th style=\"color: green;\">Recovered</th>\n            <th style=\"color: grey;\">Deceased</th>\n        </tr>\n        </thead>\n        <tbody *ngFor=\"let district of districtDataTemp\">\n            <tr >\n                <td  style=\"text-align: left;\"><div [style.background] = 'district.zone'>&nbsp;{{district.name}}</div></td>\n                <td style=\"text-align: right;\"><strong *ngIf=\"district.deltaConfirmed !='0'\" style=\"font-size: small; color: orangered;\">&uarr;{{district.deltaConfirmed}}&nbsp;</strong>{{district.confirmed}}</td>\n                <td>{{district.active}}</td>\n                <td style=\"text-align: right;\"><strong *ngIf=\"district.deltaRecovered !='0'\" style=\"font-size: small;  color: green;\">&uarr;{{district.deltaRecovered}}&nbsp;</strong>{{district.recovered}}</td>\n                <td style=\"text-align: right;\"><strong *ngIf=\"district.deltaDeaths !='0'\" style=\"font-size: small; color: gray;\">&uarr;{{district.deltaDeaths}}&nbsp;</strong>{{district.deceased}}</td>\n            </tr>\n        </tbody>\n    </table>\n</div>\n\n<div class=\"container categoryContainer\"  *ngIf=\"isDataLoaded\">\n    <div class=\"form-group\">\n        <select [(ngModel)]=\"selectedCategory\" class=\"form-control\" id=\"category\" >\n            <option [value]=\"Resources\" disabled style=\"background-color: grey;\">Resources</option>\n        <option *ngFor='let category of resourcesCategory' [value]=\"category\">{{category}}</option>\n    </select>\n</div>\n\n<app-resources [state] = \"state\" [category]=\"selectedCategory\" *ngIf=\"selectedCategory\" ></app-resources>\n</div>\n";
     /***/
   },
 
@@ -1645,7 +1645,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "@media only screen and (max-width: 600px) {\r\n  div.chartContainer{\r\n       text-align: center!important;\r\n       margin-top: 5vh!important;\r\n       margin-left: 1vw!important;\r\n       float: none!important;\r\n    }\r\n    .chartDiv{\r\n        text-align: center!important;\r\n    }\r\n    #label{\r\n      top : 5vh!important;\r\n    }\r\n  \r\n  }\r\n\r\ndiv.chartDiv{\r\n  display: inline-block;\r\n  text-align: center;\r\n}\r\n\r\ndiv.chartContainer{\r\n  background-color: transparent;\r\n text-align: center;\r\n align-items: center;\r\n border-radius: 5px;\r\n padding: 10px;\r\n margin-top: 20px;\r\n float: left;\r\n width: -webkit-fit-content;\r\n width: -moz-fit-content;\r\n width: fit-content;\r\n}\r\n\r\ndiv.pieChartDiv{\r\n  margin-top: 10vh;\r\n  display: inline-block;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ3JhcGgvZ3JhcGguY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO09BQ0ssNEJBQTRCO09BQzVCLHlCQUF5QjtPQUN6QiwwQkFBMEI7T0FDMUIscUJBQXFCO0lBQ3hCO0lBQ0E7UUFDSSw0QkFBNEI7SUFDaEM7SUFDQTtNQUNFLG1CQUFtQjtJQUNyQjs7RUFFRjs7QUFFRjtFQUNFLHFCQUFxQjtFQUNyQixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSw2QkFBNkI7Q0FDOUIsa0JBQWtCO0NBQ2xCLG1CQUFtQjtDQUNuQixrQkFBa0I7Q0FDbEIsYUFBYTtDQUNiLGdCQUFnQjtDQUNoQixXQUFXO0NBQ1gsMEJBQWtCO0NBQWxCLHVCQUFrQjtDQUFsQixrQkFBa0I7QUFDbkI7O0FBSUE7RUFDRSxnQkFBZ0I7RUFDaEIscUJBQXFCO0FBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvZ3JhcGgvZ3JhcGguY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNjAwcHgpIHtcclxuICBkaXYuY2hhcnRDb250YWluZXJ7XHJcbiAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXIhaW1wb3J0YW50O1xyXG4gICAgICAgbWFyZ2luLXRvcDogNXZoIWltcG9ydGFudDtcclxuICAgICAgIG1hcmdpbi1sZWZ0OiAxdnchaW1wb3J0YW50O1xyXG4gICAgICAgZmxvYXQ6IG5vbmUhaW1wb3J0YW50O1xyXG4gICAgfVxyXG4gICAgLmNoYXJ0RGl2e1xyXG4gICAgICAgIHRleHQtYWxpZ246IGNlbnRlciFpbXBvcnRhbnQ7XHJcbiAgICB9XHJcbiAgICAjbGFiZWx7XHJcbiAgICAgIHRvcCA6IDV2aCFpbXBvcnRhbnQ7XHJcbiAgICB9XHJcbiAgXHJcbiAgfVxyXG5cclxuZGl2LmNoYXJ0RGl2e1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuXHJcbmRpdi5jaGFydENvbnRhaW5lcntcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDtcclxuIHRleHQtYWxpZ246IGNlbnRlcjtcclxuIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiBib3JkZXItcmFkaXVzOiA1cHg7XHJcbiBwYWRkaW5nOiAxMHB4O1xyXG4gbWFyZ2luLXRvcDogMjBweDtcclxuIGZsb2F0OiBsZWZ0O1xyXG4gd2lkdGg6IGZpdC1jb250ZW50O1xyXG59XHJcblxyXG5cclxuXHJcbmRpdi5waWVDaGFydERpdntcclxuICBtYXJnaW4tdG9wOiAxMHZoO1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxufSJdfQ== */";
+    __webpack_exports__["default"] = "@media only screen and (max-width: 600px) {\r\n  div.chartContainer{\r\n       text-align: center!important;\r\n       margin-top: 5vh!important;\r\n       margin-left: 1vw!important;\r\n       float: none!important;\r\n    }\r\n    .chartDiv{\r\n        text-align: center!important;\r\n    }\r\n    #label{\r\n      top : 5vh!important;\r\n    }\r\n  \r\n  }\r\n\r\ndiv.chartDiv{\r\n  display: inline-block;\r\n  text-align: center;\r\n}\r\n\r\ndiv.chartContainer{\r\n  background-color: #1e272c;\r\n text-align: center;\r\n align-items: center;\r\n border-radius: 5px;\r\n padding: 10px;\r\n margin-top: 20px;\r\n float: left;\r\n width: -webkit-fit-content;\r\n width: -moz-fit-content;\r\n width: fit-content;\r\n}\r\n\r\ndiv.pieChartDiv{\r\n  margin-top: 10vh;\r\n  display: inline-block;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ3JhcGgvZ3JhcGguY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO09BQ0ssNEJBQTRCO09BQzVCLHlCQUF5QjtPQUN6QiwwQkFBMEI7T0FDMUIscUJBQXFCO0lBQ3hCO0lBQ0E7UUFDSSw0QkFBNEI7SUFDaEM7SUFDQTtNQUNFLG1CQUFtQjtJQUNyQjs7RUFFRjs7QUFFRjtFQUNFLHFCQUFxQjtFQUNyQixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSx5QkFBeUI7Q0FDMUIsa0JBQWtCO0NBQ2xCLG1CQUFtQjtDQUNuQixrQkFBa0I7Q0FDbEIsYUFBYTtDQUNiLGdCQUFnQjtDQUNoQixXQUFXO0NBQ1gsMEJBQWtCO0NBQWxCLHVCQUFrQjtDQUFsQixrQkFBa0I7QUFDbkI7O0FBSUE7RUFDRSxnQkFBZ0I7RUFDaEIscUJBQXFCO0FBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvZ3JhcGgvZ3JhcGguY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNjAwcHgpIHtcclxuICBkaXYuY2hhcnRDb250YWluZXJ7XHJcbiAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXIhaW1wb3J0YW50O1xyXG4gICAgICAgbWFyZ2luLXRvcDogNXZoIWltcG9ydGFudDtcclxuICAgICAgIG1hcmdpbi1sZWZ0OiAxdnchaW1wb3J0YW50O1xyXG4gICAgICAgZmxvYXQ6IG5vbmUhaW1wb3J0YW50O1xyXG4gICAgfVxyXG4gICAgLmNoYXJ0RGl2e1xyXG4gICAgICAgIHRleHQtYWxpZ246IGNlbnRlciFpbXBvcnRhbnQ7XHJcbiAgICB9XHJcbiAgICAjbGFiZWx7XHJcbiAgICAgIHRvcCA6IDV2aCFpbXBvcnRhbnQ7XHJcbiAgICB9XHJcbiAgXHJcbiAgfVxyXG5cclxuZGl2LmNoYXJ0RGl2e1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuXHJcbmRpdi5jaGFydENvbnRhaW5lcntcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMWUyNzJjO1xyXG4gdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuIGJvcmRlci1yYWRpdXM6IDVweDtcclxuIHBhZGRpbmc6IDEwcHg7XHJcbiBtYXJnaW4tdG9wOiAyMHB4O1xyXG4gZmxvYXQ6IGxlZnQ7XHJcbiB3aWR0aDogZml0LWNvbnRlbnQ7XHJcbn1cclxuXHJcblxyXG5cclxuZGl2LnBpZUNoYXJ0RGl2e1xyXG4gIG1hcmdpbi10b3A6IDEwdmg7XHJcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG59Il19 */";
     /***/
   },
 
@@ -2035,7 +2035,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Jlc291cmNlcy9yZXNvdXJjZXMuY29tcG9uZW50LmNzcyJ9 */";
+    __webpack_exports__["default"] = "#resourcesContainer{\r\n    background-color: #1e272c;\r\n    text-align: left;\r\n    height: -webkit-fit-content;\r\n    height: -moz-fit-content;\r\n    height: fit-content;\r\n    border-radius: 5px;\r\n    width: 100%;\r\n    \r\n    \r\n}\r\ntbody{\r\n    margin: 2vh 0 2vh 0;\r\n    display: block;\r\n    max-height: 85vh;\r\n    overflow-y: auto;\r\n    overflow-x: hidden;\r\n    \r\n}\r\n.resource{\r\n    margin-top: 15px;\r\n    background-color: #282C35;\r\n    color: cadetblue;\r\n    border-radius: 10px;\r\n    border-style: solid;\r\n    border-width: 0px;\r\n    border-color: whitesmoke;\r\n    box-shadow:1px 1px 4px grey;\r\n    \r\n}\r\n.resourceDetail{\r\n    text-align: justify;\r\n    float: left;\r\n    padding: 10px;\r\n    width: 100%;\r\n    margin-bottom: 2vh;\r\n    background-color: #1e272c;\r\n}\r\n.resourceDetail h6{\r\n    font-weight: 900;\r\n    color: royalblue;\r\n}\r\n.resourceDetail p{\r\n    text-align: left;\r\n    justify-content: left;\r\n    font-size: small;\r\n    font-stretch: condensed;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmVzb3VyY2VzL3Jlc291cmNlcy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0kseUJBQXlCO0lBQ3pCLGdCQUFnQjtJQUNoQiwyQkFBbUI7SUFBbkIsd0JBQW1CO0lBQW5CLG1CQUFtQjtJQUNuQixrQkFBa0I7SUFDbEIsV0FBVzs7O0FBR2Y7QUFDQTtJQUNJLG1CQUFtQjtJQUNuQixjQUFjO0lBQ2QsZ0JBQWdCO0lBQ2hCLGdCQUFnQjtJQUNoQixrQkFBa0I7O0FBRXRCO0FBQ0E7SUFDSSxnQkFBZ0I7SUFDaEIseUJBQXlCO0lBQ3pCLGdCQUFnQjtJQUNoQixtQkFBbUI7SUFDbkIsbUJBQW1CO0lBQ25CLGlCQUFpQjtJQUNqQix3QkFBd0I7SUFDeEIsMkJBQTJCOztBQUUvQjtBQUlBO0lBQ0ksbUJBQW1CO0lBQ25CLFdBQVc7SUFDWCxhQUFhO0lBQ2IsV0FBVztJQUNYLGtCQUFrQjtJQUNsQix5QkFBeUI7QUFDN0I7QUFDQTtJQUNJLGdCQUFnQjtJQUNoQixnQkFBZ0I7QUFDcEI7QUFDQTtJQUNJLGdCQUFnQjtJQUNoQixxQkFBcUI7SUFDckIsZ0JBQWdCO0lBQ2hCLHVCQUF1QjtBQUMzQiIsImZpbGUiOiJzcmMvYXBwL3Jlc291cmNlcy9yZXNvdXJjZXMuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIiNyZXNvdXJjZXNDb250YWluZXJ7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMWUyNzJjO1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxuICAgIGhlaWdodDogZml0LWNvbnRlbnQ7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIFxyXG4gICAgXHJcbn1cclxudGJvZHl7XHJcbiAgICBtYXJnaW46IDJ2aCAwIDJ2aCAwO1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbiAgICBtYXgtaGVpZ2h0OiA4NXZoO1xyXG4gICAgb3ZlcmZsb3cteTogYXV0bztcclxuICAgIG92ZXJmbG93LXg6IGhpZGRlbjtcclxuICAgIFxyXG59XHJcbi5yZXNvdXJjZXtcclxuICAgIG1hcmdpbi10b3A6IDE1cHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMjgyQzM1O1xyXG4gICAgY29sb3I6IGNhZGV0Ymx1ZTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDEwcHg7XHJcbiAgICBib3JkZXItc3R5bGU6IHNvbGlkO1xyXG4gICAgYm9yZGVyLXdpZHRoOiAwcHg7XHJcbiAgICBib3JkZXItY29sb3I6IHdoaXRlc21va2U7XHJcbiAgICBib3gtc2hhZG93OjFweCAxcHggNHB4IGdyZXk7XHJcbiAgICBcclxufVxyXG5cclxuXHJcblxyXG4ucmVzb3VyY2VEZXRhaWx7XHJcbiAgICB0ZXh0LWFsaWduOiBqdXN0aWZ5O1xyXG4gICAgZmxvYXQ6IGxlZnQ7XHJcbiAgICBwYWRkaW5nOiAxMHB4O1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAydmg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMWUyNzJjO1xyXG59XHJcbi5yZXNvdXJjZURldGFpbCBoNntcclxuICAgIGZvbnQtd2VpZ2h0OiA5MDA7XHJcbiAgICBjb2xvcjogcm95YWxibHVlO1xyXG59XHJcbi5yZXNvdXJjZURldGFpbCBwe1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxuICAgIGp1c3RpZnktY29udGVudDogbGVmdDtcclxuICAgIGZvbnQtc2l6ZTogc21hbGw7XHJcbiAgICBmb250LXN0cmV0Y2g6IGNvbmRlbnNlZDtcclxufSJdfQ== */";
     /***/
   },
 
@@ -2070,24 +2070,62 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _resources_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! ./resources.service */
+    "./src/app/resources/resources.service.ts");
 
     var ResourcesComponent = /*#__PURE__*/function () {
-      function ResourcesComponent() {
+      function ResourcesComponent(service) {
         _classCallCheck(this, ResourcesComponent);
+
+        this.service = service;
+        this.resources = [];
       }
 
       _createClass(ResourcesComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {
-          this.resourceCategory = this.category;
-          console.log(this.category);
+        value: function ngOnInit() {}
+      }, {
+        key: "ngOnChanges",
+        value: function ngOnChanges(changes) {
+          this.getResources(changes.category.currentValue);
+        }
+      }, {
+        key: "getResources",
+        value: function getResources(category) {
+          var _this4 = this;
+
+          this.service.getResources().then(function (res) {
+            _this4.resources = [];
+            res['resources'].forEach(function (element) {
+              if (element.state == _this4.state && element.category == category) {
+                _this4.resources.push({
+                  category: element.category,
+                  city: element.city,
+                  descriptionandorserviceprovided: element.descriptionandorserviceprovided,
+                  nameoftheorganisation: element.nameoftheorganisation,
+                  phonenumber: element.phonenumber
+                });
+              }
+            });
+          })["catch"]();
         }
       }]);
 
       return ResourcesComponent;
     }();
 
+    ResourcesComponent.ctorParameters = function () {
+      return [{
+        type: _resources_service__WEBPACK_IMPORTED_MODULE_2__["ResourcesService"]
+      }];
+    };
+
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], ResourcesComponent.prototype, "category", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], ResourcesComponent.prototype, "state", void 0);
     ResourcesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-resources',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -2097,6 +2135,81 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /*! ./resources.component.css */
       "./src/app/resources/resources.component.css"))["default"]]
     })], ResourcesComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/resources/resources.service.ts":
+  /*!************************************************!*\
+    !*** ./src/app/resources/resources.service.ts ***!
+    \************************************************/
+
+  /*! exports provided: ResourcesService */
+
+  /***/
+  function srcAppResourcesResourcesServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ResourcesService", function () {
+      return ResourcesService;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/common/http */
+    "./node_modules/@angular/common/fesm2015/http.js");
+    /* harmony import */
+
+
+    var src_environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! src/environments/environment */
+    "./src/environments/environment.ts");
+
+    var ResourcesService = /*#__PURE__*/function () {
+      function ResourcesService(http) {
+        _classCallCheck(this, ResourcesService);
+
+        this.http = http;
+      }
+
+      _createClass(ResourcesService, [{
+        key: "getResources",
+        value: function getResources() {
+          return this.http.get(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].resourcesUrl).toPromise().then(function (resources) {
+            return resources;
+          })["catch"]();
+        }
+      }]);
+
+      return ResourcesService;
+    }();
+
+    ResourcesService.ctorParameters = function () {
+      return [{
+        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
+      }];
+    };
+
+    ResourcesService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+      providedIn: 'root'
+    })], ResourcesService);
     /***/
   },
 
@@ -2116,7 +2229,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "@media only screen and (max-width: 600px){\r\n    #districtTable thead tr th {\r\n        top: 5vh!important;\r\n    }\r\n    div.categoryContainer{\r\n       \r\n        width: -webkit-fit-content!important;\r\n       \r\n        width: -moz-fit-content!important;\r\n       \r\n        width: fit-content!important;\r\n        \r\n        \r\n    }\r\n   \r\n    #category option{\r\n        float: left!important;\r\n        padding: 0!important;\r\n        word-break: break-all!important;\r\n        white-space: nowrap!important;\r\n        \r\n    }\r\n    \r\n    \r\n}\r\n\r\n.row{\r\n    padding: 0;\r\n}\r\n\r\ntable{\r\n    table-layout: fixed;\r\n    margin-top: 10px;\r\n    padding: 0;\r\n    word-spacing: normal;\r\n    word-break: keep-all;\r\n    \r\n}\r\n\r\n#summaryTable{\r\n    margin-top: 10vh;\r\n    margin-bottom: 10vh;\r\n}\r\n\r\n#summaryTable td{\r\n    font-size: large;\r\n}\r\n\r\n#summaryTable tbody tr td div{\r\n    background-color: #17223B;\r\n    border-radius: 8px;\r\n    height: 10vh!important;\r\n    padding: 0.5em;\r\n    height: 100%;\r\n}\r\n\r\nthead{\r\n    text-align: center;\r\n    \r\n}\r\n\r\nth{\r\n    text-align: center;\r\n    font-size: x-small;\r\n   \r\n}\r\n\r\ntbody > tr{\r\n    text-align: center;\r\n    font-size: x-small;\r\n    font-weight: 700;\r\n    line-height: 3em;\r\n    \r\n   \r\n}\r\n\r\n#districtTable thead tr th{\r\n    position: -webkit-sticky;\r\n    position: sticky;\r\n    top: 8vh;\r\n    background-color: whitesmoke;\r\n    font-size: smaller;\r\n    \r\n}\r\n\r\n#districtTable tbody tr td{\r\n    background-color: #17223B;\r\n}\r\n\r\n#districtTable tbody tr td div{\r\n      padding: 1px;\r\n      width: 3%;\r\n}\r\n\r\n#districtTable tbody tr:hover{\r\n    background-color: aliceblue;\r\n   \r\n}\r\n\r\nbutton{\r\n    margin-left: 1vw;\r\n    background-color: transparent;\r\n   float: left;\r\n    \r\n}\r\n\r\nbutton{\r\n     position: -webkit-sticky;\r\n     position: sticky;\r\n     z-index: 10000;\r\n        top:0;\r\n\r\n}\r\n\r\ndiv.categoryContainer{\r\n    width: 52%;\r\n}\r\n\r\n#category option{\r\n    font-size: xx-small;\r\n    \r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3RhdGUtZGV0YWlscy9zdGF0ZS1kZXRhaWxzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSTtRQUNJLGtCQUFrQjtJQUN0QjtJQUNBOztRQUVJLG9DQUE0Qjs7UUFBNUIsaUNBQTRCOztRQUE1Qiw0QkFBNEI7OztJQUdoQzs7SUFFQTtRQUNJLHFCQUFxQjtRQUNyQixvQkFBb0I7UUFDcEIsK0JBQStCO1FBQy9CLDZCQUE2Qjs7SUFFakM7OztBQUdKOztBQUVBO0lBQ0ksVUFBVTtBQUNkOztBQUNBO0lBQ0ksbUJBQW1CO0lBQ25CLGdCQUFnQjtJQUNoQixVQUFVO0lBQ1Ysb0JBQW9CO0lBQ3BCLG9CQUFvQjs7QUFFeEI7O0FBQ0E7SUFDSSxnQkFBZ0I7SUFDaEIsbUJBQW1CO0FBQ3ZCOztBQUNBO0lBQ0ksZ0JBQWdCO0FBQ3BCOztBQUNBO0lBQ0kseUJBQXlCO0lBQ3pCLGtCQUFrQjtJQUNsQixzQkFBc0I7SUFDdEIsY0FBYztJQUNkLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxrQkFBa0I7O0FBRXRCOztBQUNBO0lBQ0ksa0JBQWtCO0lBQ2xCLGtCQUFrQjs7QUFFdEI7O0FBQ0E7SUFDSSxrQkFBa0I7SUFDbEIsa0JBQWtCO0lBQ2xCLGdCQUFnQjtJQUNoQixnQkFBZ0I7OztBQUdwQjs7QUFJQTtJQUNJLHdCQUFnQjtJQUFoQixnQkFBZ0I7SUFDaEIsUUFBUTtJQUNSLDRCQUE0QjtJQUM1QixrQkFBa0I7O0FBRXRCOztBQUNBO0lBQ0kseUJBQXlCO0FBQzdCOztBQUVBO01BQ00sWUFBWTtNQUNaLFNBQVM7QUFDZjs7QUFDQTtJQUNJLDJCQUEyQjs7QUFFL0I7O0FBQ0E7SUFDSSxnQkFBZ0I7SUFDaEIsNkJBQTZCO0dBQzlCLFdBQVc7O0FBRWQ7O0FBRUE7S0FDSyx3QkFBZ0I7S0FBaEIsZ0JBQWdCO0tBQ2hCLGNBQWM7UUFDWCxLQUFLOztBQUViOztBQUVBO0lBQ0ksVUFBVTtBQUNkOztBQUVBO0lBQ0ksbUJBQW1COztBQUV2QiIsImZpbGUiOiJzcmMvYXBwL3N0YXRlLWRldGFpbHMvc3RhdGUtZGV0YWlscy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2MDBweCl7XHJcbiAgICAjZGlzdHJpY3RUYWJsZSB0aGVhZCB0ciB0aCB7XHJcbiAgICAgICAgdG9wOiA1dmghaW1wb3J0YW50O1xyXG4gICAgfVxyXG4gICAgZGl2LmNhdGVnb3J5Q29udGFpbmVye1xyXG4gICAgICAgXHJcbiAgICAgICAgd2lkdGg6IGZpdC1jb250ZW50IWltcG9ydGFudDtcclxuICAgICAgICBcclxuICAgICAgICBcclxuICAgIH1cclxuICAgXHJcbiAgICAjY2F0ZWdvcnkgb3B0aW9ue1xyXG4gICAgICAgIGZsb2F0OiBsZWZ0IWltcG9ydGFudDtcclxuICAgICAgICBwYWRkaW5nOiAwIWltcG9ydGFudDtcclxuICAgICAgICB3b3JkLWJyZWFrOiBicmVhay1hbGwhaW1wb3J0YW50O1xyXG4gICAgICAgIHdoaXRlLXNwYWNlOiBub3dyYXAhaW1wb3J0YW50O1xyXG4gICAgICAgIFxyXG4gICAgfVxyXG4gICAgXHJcbiAgICBcclxufVxyXG5cclxuLnJvd3tcclxuICAgIHBhZGRpbmc6IDA7XHJcbn1cclxudGFibGV7XHJcbiAgICB0YWJsZS1sYXlvdXQ6IGZpeGVkO1xyXG4gICAgbWFyZ2luLXRvcDogMTBweDtcclxuICAgIHBhZGRpbmc6IDA7XHJcbiAgICB3b3JkLXNwYWNpbmc6IG5vcm1hbDtcclxuICAgIHdvcmQtYnJlYWs6IGtlZXAtYWxsO1xyXG4gICAgXHJcbn1cclxuI3N1bW1hcnlUYWJsZXtcclxuICAgIG1hcmdpbi10b3A6IDEwdmg7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAxMHZoO1xyXG59XHJcbiNzdW1tYXJ5VGFibGUgdGR7XHJcbiAgICBmb250LXNpemU6IGxhcmdlO1xyXG59XHJcbiNzdW1tYXJ5VGFibGUgdGJvZHkgdHIgdGQgZGl2e1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzE3MjIzQjtcclxuICAgIGJvcmRlci1yYWRpdXM6IDhweDtcclxuICAgIGhlaWdodDogMTB2aCFpbXBvcnRhbnQ7XHJcbiAgICBwYWRkaW5nOiAwLjVlbTtcclxuICAgIGhlaWdodDogMTAwJTtcclxufVxyXG5cclxudGhlYWR7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBcclxufVxyXG50aHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGZvbnQtc2l6ZTogeC1zbWFsbDtcclxuICAgXHJcbn1cclxudGJvZHkgPiB0cntcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGZvbnQtc2l6ZTogeC1zbWFsbDtcclxuICAgIGZvbnQtd2VpZ2h0OiA3MDA7XHJcbiAgICBsaW5lLWhlaWdodDogM2VtO1xyXG4gICAgXHJcbiAgIFxyXG59XHJcblxyXG5cclxuXHJcbiNkaXN0cmljdFRhYmxlIHRoZWFkIHRyIHRoe1xyXG4gICAgcG9zaXRpb246IHN0aWNreTtcclxuICAgIHRvcDogOHZoO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGVzbW9rZTtcclxuICAgIGZvbnQtc2l6ZTogc21hbGxlcjtcclxuICAgIFxyXG59XHJcbiNkaXN0cmljdFRhYmxlIHRib2R5IHRyIHRke1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzE3MjIzQjtcclxufVxyXG5cclxuI2Rpc3RyaWN0VGFibGUgdGJvZHkgdHIgdGQgZGl2e1xyXG4gICAgICBwYWRkaW5nOiAxcHg7XHJcbiAgICAgIHdpZHRoOiAzJTtcclxufVxyXG4jZGlzdHJpY3RUYWJsZSB0Ym9keSB0cjpob3ZlcntcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGFsaWNlYmx1ZTtcclxuICAgXHJcbn1cclxuYnV0dG9ue1xyXG4gICAgbWFyZ2luLWxlZnQ6IDF2dztcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xyXG4gICBmbG9hdDogbGVmdDtcclxuICAgIFxyXG59XHJcblxyXG5idXR0b257XHJcbiAgICAgcG9zaXRpb246IHN0aWNreTtcclxuICAgICB6LWluZGV4OiAxMDAwMDtcclxuICAgICAgICB0b3A6MDtcclxuXHJcbn1cclxuXHJcbmRpdi5jYXRlZ29yeUNvbnRhaW5lcntcclxuICAgIHdpZHRoOiA1MiU7XHJcbn1cclxuXHJcbiNjYXRlZ29yeSBvcHRpb257XHJcbiAgICBmb250LXNpemU6IHh4LXNtYWxsO1xyXG4gICAgXHJcbn0iXX0= */";
+    __webpack_exports__["default"] = "@media only screen and (max-width: 600px){\r\n    #districtTable thead tr th {\r\n        top: 5vh!important;\r\n    }\r\n    div.categoryContainer{\r\n       \r\n        width: -webkit-fit-content!important;\r\n       \r\n        width: -moz-fit-content!important;\r\n       \r\n        width: fit-content!important;\r\n        \r\n        \r\n    }\r\n   \r\n    #category option{\r\n        float: left!important;\r\n        padding: 0!important;\r\n        word-break: break-all!important;\r\n        white-space: nowrap!important;\r\n        \r\n    }\r\n    \r\n    \r\n}\r\n\r\n.row{\r\n    padding: 0;\r\n}\r\n\r\ntable{\r\n    table-layout: fixed;\r\n    margin-top: 10px;\r\n    padding: 0;\r\n    word-spacing: normal;\r\n    word-break: keep-all;\r\n    \r\n}\r\n\r\n#summaryTable{\r\n    margin-top: 10vh;\r\n    margin-bottom: 10vh;\r\n}\r\n\r\n#summaryTable td{\r\n    font-size: large;\r\n}\r\n\r\n#summaryTable tbody tr td div{\r\n    background-color: #17223B;\r\n    border-radius: 8px;\r\n    height: 10vh!important;\r\n    padding: 0.5em;\r\n    height: 100%;\r\n}\r\n\r\nthead{\r\n    text-align: center;\r\n    \r\n}\r\n\r\nth{\r\n    text-align: center;\r\n    font-size: x-small;\r\n   \r\n}\r\n\r\ntbody > tr{\r\n    text-align: center;\r\n    font-size: x-small;\r\n    font-weight: 700;\r\n    line-height: 3em;\r\n    \r\n   \r\n}\r\n\r\n#districtTable thead tr th{\r\n    position: -webkit-sticky;\r\n    position: sticky;\r\n    top: 8vh;\r\n    background-color: whitesmoke;\r\n    font-size: smaller;\r\n    \r\n}\r\n\r\n#districtTable tbody tr:hover{\r\n    background-color: whitesmoke!important;\r\n    color: cadetblue;\r\n}\r\n\r\n#districtTable tbody tr td{\r\n    background-color: #17223B;\r\n}\r\n\r\n#districtTable tbody tr td div{\r\n      padding: 1px;\r\n      width: 3%;\r\n}\r\n\r\n#districtTable tbody tr:hover{\r\n    background-color: aliceblue;\r\n   \r\n}\r\n\r\nbutton{\r\n    margin-left: 1vw;\r\n    background-color: transparent;\r\n   float: left;\r\n   position: -webkit-sticky;\r\n   position: sticky;\r\n     z-index: 10000;\r\n        top:0;\r\n    \r\n}\r\n\r\ndiv.categoryContainer{\r\n    width: 52%;\r\n}\r\n\r\n#category{\r\n    background-color: #1e272c;\r\n    color: cadetblue;\r\n}\r\n\r\n#category option{\r\n    font-size: xx-small;\r\n    \r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3RhdGUtZGV0YWlscy9zdGF0ZS1kZXRhaWxzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSTtRQUNJLGtCQUFrQjtJQUN0QjtJQUNBOztRQUVJLG9DQUE0Qjs7UUFBNUIsaUNBQTRCOztRQUE1Qiw0QkFBNEI7OztJQUdoQzs7SUFFQTtRQUNJLHFCQUFxQjtRQUNyQixvQkFBb0I7UUFDcEIsK0JBQStCO1FBQy9CLDZCQUE2Qjs7SUFFakM7OztBQUdKOztBQUVBO0lBQ0ksVUFBVTtBQUNkOztBQUNBO0lBQ0ksbUJBQW1CO0lBQ25CLGdCQUFnQjtJQUNoQixVQUFVO0lBQ1Ysb0JBQW9CO0lBQ3BCLG9CQUFvQjs7QUFFeEI7O0FBQ0E7SUFDSSxnQkFBZ0I7SUFDaEIsbUJBQW1CO0FBQ3ZCOztBQUNBO0lBQ0ksZ0JBQWdCO0FBQ3BCOztBQUNBO0lBQ0kseUJBQXlCO0lBQ3pCLGtCQUFrQjtJQUNsQixzQkFBc0I7SUFDdEIsY0FBYztJQUNkLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxrQkFBa0I7O0FBRXRCOztBQUNBO0lBQ0ksa0JBQWtCO0lBQ2xCLGtCQUFrQjs7QUFFdEI7O0FBQ0E7SUFDSSxrQkFBa0I7SUFDbEIsa0JBQWtCO0lBQ2xCLGdCQUFnQjtJQUNoQixnQkFBZ0I7OztBQUdwQjs7QUFJQTtJQUNJLHdCQUFnQjtJQUFoQixnQkFBZ0I7SUFDaEIsUUFBUTtJQUNSLDRCQUE0QjtJQUM1QixrQkFBa0I7O0FBRXRCOztBQUNBO0lBQ0ksc0NBQXNDO0lBQ3RDLGdCQUFnQjtBQUNwQjs7QUFDQTtJQUNJLHlCQUF5QjtBQUM3Qjs7QUFFQTtNQUNNLFlBQVk7TUFDWixTQUFTO0FBQ2Y7O0FBQ0E7SUFDSSwyQkFBMkI7O0FBRS9COztBQUNBO0lBQ0ksZ0JBQWdCO0lBQ2hCLDZCQUE2QjtHQUM5QixXQUFXO0dBQ1gsd0JBQWdCO0dBQWhCLGdCQUFnQjtLQUNkLGNBQWM7UUFDWCxLQUFLOztBQUViOztBQUlBO0lBQ0ksVUFBVTtBQUNkOztBQUNBO0lBQ0kseUJBQXlCO0lBQ3pCLGdCQUFnQjtBQUNwQjs7QUFDQTtJQUNJLG1CQUFtQjs7QUFFdkIiLCJmaWxlIjoic3JjL2FwcC9zdGF0ZS1kZXRhaWxzL3N0YXRlLWRldGFpbHMuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNjAwcHgpe1xyXG4gICAgI2Rpc3RyaWN0VGFibGUgdGhlYWQgdHIgdGgge1xyXG4gICAgICAgIHRvcDogNXZoIWltcG9ydGFudDtcclxuICAgIH1cclxuICAgIGRpdi5jYXRlZ29yeUNvbnRhaW5lcntcclxuICAgICAgIFxyXG4gICAgICAgIHdpZHRoOiBmaXQtY29udGVudCFpbXBvcnRhbnQ7XHJcbiAgICAgICAgXHJcbiAgICAgICAgXHJcbiAgICB9XHJcbiAgIFxyXG4gICAgI2NhdGVnb3J5IG9wdGlvbntcclxuICAgICAgICBmbG9hdDogbGVmdCFpbXBvcnRhbnQ7XHJcbiAgICAgICAgcGFkZGluZzogMCFpbXBvcnRhbnQ7XHJcbiAgICAgICAgd29yZC1icmVhazogYnJlYWstYWxsIWltcG9ydGFudDtcclxuICAgICAgICB3aGl0ZS1zcGFjZTogbm93cmFwIWltcG9ydGFudDtcclxuICAgICAgICBcclxuICAgIH1cclxuICAgIFxyXG4gICAgXHJcbn1cclxuXHJcbi5yb3d7XHJcbiAgICBwYWRkaW5nOiAwO1xyXG59XHJcbnRhYmxle1xyXG4gICAgdGFibGUtbGF5b3V0OiBmaXhlZDtcclxuICAgIG1hcmdpbi10b3A6IDEwcHg7XHJcbiAgICBwYWRkaW5nOiAwO1xyXG4gICAgd29yZC1zcGFjaW5nOiBub3JtYWw7XHJcbiAgICB3b3JkLWJyZWFrOiBrZWVwLWFsbDtcclxuICAgIFxyXG59XHJcbiNzdW1tYXJ5VGFibGV7XHJcbiAgICBtYXJnaW4tdG9wOiAxMHZoO1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMTB2aDtcclxufVxyXG4jc3VtbWFyeVRhYmxlIHRke1xyXG4gICAgZm9udC1zaXplOiBsYXJnZTtcclxufVxyXG4jc3VtbWFyeVRhYmxlIHRib2R5IHRyIHRkIGRpdntcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMxNzIyM0I7XHJcbiAgICBib3JkZXItcmFkaXVzOiA4cHg7XHJcbiAgICBoZWlnaHQ6IDEwdmghaW1wb3J0YW50O1xyXG4gICAgcGFkZGluZzogMC41ZW07XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbn1cclxuXHJcbnRoZWFke1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgXHJcbn1cclxudGh7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBmb250LXNpemU6IHgtc21hbGw7XHJcbiAgIFxyXG59XHJcbnRib2R5ID4gdHJ7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBmb250LXNpemU6IHgtc21hbGw7XHJcbiAgICBmb250LXdlaWdodDogNzAwO1xyXG4gICAgbGluZS1oZWlnaHQ6IDNlbTtcclxuICAgIFxyXG4gICBcclxufVxyXG5cclxuXHJcblxyXG4jZGlzdHJpY3RUYWJsZSB0aGVhZCB0ciB0aHtcclxuICAgIHBvc2l0aW9uOiBzdGlja3k7XHJcbiAgICB0b3A6IDh2aDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlc21va2U7XHJcbiAgICBmb250LXNpemU6IHNtYWxsZXI7XHJcbiAgICBcclxufVxyXG4jZGlzdHJpY3RUYWJsZSB0Ym9keSB0cjpob3ZlcntcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlc21va2UhaW1wb3J0YW50O1xyXG4gICAgY29sb3I6IGNhZGV0Ymx1ZTtcclxufVxyXG4jZGlzdHJpY3RUYWJsZSB0Ym9keSB0ciB0ZHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMxNzIyM0I7XHJcbn1cclxuXHJcbiNkaXN0cmljdFRhYmxlIHRib2R5IHRyIHRkIGRpdntcclxuICAgICAgcGFkZGluZzogMXB4O1xyXG4gICAgICB3aWR0aDogMyU7XHJcbn1cclxuI2Rpc3RyaWN0VGFibGUgdGJvZHkgdHI6aG92ZXJ7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBhbGljZWJsdWU7XHJcbiAgIFxyXG59XHJcbmJ1dHRvbntcclxuICAgIG1hcmdpbi1sZWZ0OiAxdnc7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDtcclxuICAgZmxvYXQ6IGxlZnQ7XHJcbiAgIHBvc2l0aW9uOiBzdGlja3k7XHJcbiAgICAgei1pbmRleDogMTAwMDA7XHJcbiAgICAgICAgdG9wOjA7XHJcbiAgICBcclxufVxyXG5cclxuXHJcblxyXG5kaXYuY2F0ZWdvcnlDb250YWluZXJ7XHJcbiAgICB3aWR0aDogNTIlO1xyXG59XHJcbiNjYXRlZ29yeXtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMxZTI3MmM7XHJcbiAgICBjb2xvcjogY2FkZXRibHVlO1xyXG59XHJcbiNjYXRlZ29yeSBvcHRpb257XHJcbiAgICBmb250LXNpemU6IHh4LXNtYWxsO1xyXG4gICAgXHJcbn0iXX0= */";
     /***/
   },
 
@@ -2225,23 +2338,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getZoneData",
         value: function getZoneData() {
-          var _this4 = this;
+          var _this5 = this;
 
           this.service.getZoneData().then(function (res) {
             res['zones'].forEach(function (element) {
-              if (element.state == _this4.state) {
-                _this4.districtZone.push({
+              if (element.state == _this5.state) {
+                _this5.districtZone.push({
                   district: element.district,
                   zone: element.zone.toLowerCase()
                 });
               }
             });
           }).then(function () {
-            return _this4.showDataTemp();
+            return _this5.showDataTemp();
           }).then(function () {
-            return _this4.getResources();
+            return _this5.getResources();
           }).then(function () {
-            _this4.isDataLoaded = true;
+            _this5.isDataLoaded = true;
           })["catch"](function (error) {
             console.log(error);
           });
@@ -2249,22 +2362,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getResources",
         value: function getResources() {
-          var _this5 = this;
+          var _this6 = this;
 
           this.service.getResources().then(function (res) {
             res['resources'].forEach(function (element) {
-              if (element.state == _this5.state) {
-                if (!_this5.resourcesCategory.includes(element.category)) {
-                  _this5.resourcesCategory.push(element.category);
-                }
+              if (element.state == _this6.state) {
+                if (!_this6.resourcesCategory.includes(element.category)) {
+                  _this6.resourcesCategory.push(element.category);
+                } // this.resources.push({category:element.category, city : element.city,descriptionandorserviceprovided :element.descriptionandorserviceprovided,
+                //    nameoftheorganisation : element.nameoftheorganisation, phonenumber : element.phonenumber})
 
-                _this5.resources.push({
-                  category: element.category,
-                  city: element.city,
-                  descriptionandorserviceprovided: element.descriptionandorserviceprovided,
-                  nameoftheorganisation: element.nameoftheorganisation,
-                  phonenumber: element.phonenumber
-                });
               }
             });
           })["catch"]();
