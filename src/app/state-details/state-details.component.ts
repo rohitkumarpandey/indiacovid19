@@ -8,6 +8,7 @@ import { StateService } from './state.service';
   styleUrls: ['./state-details.component.css']
 })
 export class StateDetailsComponent implements OnInit {
+  resource : 'Resources';
   isDataLoaded : boolean = false;
   selectedCategory : string;
   stateDetail;
