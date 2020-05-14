@@ -15,6 +15,7 @@ import { ErrorComponent } from './error/error.component';
 import { LoadingComponent } from './loading/loading.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { FormsModule } from '@angular/forms';
+import { GlobalComponent } from './global/global.component';
 
 
 
@@ -29,7 +30,8 @@ import { FormsModule } from '@angular/forms';
     GraphComponent,
     ErrorComponent,
     LoadingComponent,
-    ResourcesComponent ],
+    ResourcesComponent,
+    GlobalComponent ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule, GoogleChartsModule, FormsModule ],
   providers: [AppService],
   bootstrap: [AppComponent]

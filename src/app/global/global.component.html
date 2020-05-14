@@ -1,0 +1,54 @@
+<app-loading  *ngIf="!isDataLoaded" ></app-loading>
+
+
+<div id='contentBox' class="row col-md-6 col-md-offset-3" *ngIf="isDataLoaded">
+    
+    <label class="text-danger" style="font-size: xx-large; float: left; color: cornflowerblue;">Global Data</label>
+    <br>
+    <div class="container-fluid" style="width: 90%;">
+    <input id="searchCountry"  class="form-control" placeholder="&#61442;&nbsp;&nbsp;&nbsp;India" autofocus >
+</div>
+    <table id="globalTable" class="table table-condensed w-auto" style="width: 100%;">
+        <thead>
+            <tr>
+            <th style="color: orangered;" >Confirmed</th>
+            <th style="color: green;" >Recovered</th>
+            <th style="color: gray;">Deceased</th>
+        </tr>
+        </thead>
+        <tbody *ngFor="let g of globalData">
+            <tr >
+                <td style="color: orangered;"><div>{{g.TotalConfirmed | number:'':'en-US'}}<p *ngIf="g.NewConfirmed!=0" style="font-size: small;">&uarr;{{g.NewConfirmed| number:'':'en-US'}}</p></div></td>
+                
+                <td style="color: green;" ><div>{{g.TotalRecovered| number:'':'en-US'}}<p *ngIf="g.NewRecovered!=0" style="font-size: small;">&uarr;{{g.NewRecovered | number:'':'en-US'}}</p></div></td>
+                <td style="color: gray;"><div>{{g.TotalDeaths | number:'':'en-US'}}<p *ngIf="g.NewDeaths!=0" style="font-size: small;">&uarr;{{g.NewDeaths | number:'':'en-US'}}</p></div></td>
+            </tr>
+            <tr>
+                <td style="font-size: small;" colspan=4>Last updated at: {{lastUpdated | date : 'medium'}}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+   
+    <table class="table table-condensed table-hover w-auto" style="width: 100%;" id="countryTable">
+        <thead>
+            <tr>
+            <th style="color: black;">Country</th>
+            <th style="color: orangered; text-align: right;">Confirmed</th>
+         
+            <th style="color: green; text-align: right;">Recovered</th>
+            <th style="color: grey; text-align: right;">Deceased</th>
+        </tr>
+        </thead>
+        <tbody *ngFor="let country of countryData">
+            <tr >
+                <td  style="text-align: left;">{{country.country}}</td>
+                <td style="text-align: right;"><strong *ngIf="country.NewConfirmed !='0'" style="font-size: small; color: orangered;">&uarr;{{country.NewConfirmed | number:'':'en-US'}}&nbsp;</strong>{{country.TotalConfirmed | number:'':'en-US'}}</td>
+                
+                <td style="text-align: right;"><strong *ngIf="country.NewRecovered !='0'" style="font-size: small;  color: green;">&uarr;{{country.NewRecovered | number:'':'en-US'}}&nbsp;</strong>{{country.TotalRecovered | number:'':'en-US'}}</td>
+                <td style="text-align: right;"><strong *ngIf="country.NewDeaths !='0'" style="font-size: small; color: gray;">&uarr;{{country.NewDeaths| number:'':'en-US'}}&nbsp;</strong>{{country.TotalDeaths| number:'':'en-US'}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

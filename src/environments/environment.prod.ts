@@ -4,7 +4,9 @@ export const environment = {
   dataUrl : 'https://api.covid19india.org/data.json',
   rawDataUrl : 'https://api.covid19india.org/raw_data.json',
   zoneDataUrl : 'https://api.covid19india.org/zones.json',
-  resourcesUrl : 'https://api.covid19india.org/resources/resources.json'
+  resourcesUrl : 'https://api.covid19india.org/resources/resources.json',
+  globalDataUrl : 'https://api.covid19api.com/summary'
+
 
 
 };

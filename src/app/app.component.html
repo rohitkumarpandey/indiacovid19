@@ -17,8 +17,9 @@
                 
               
             <ul class="nav navbar-nav ">
-                <li ><a href="#" [routerLink]="['/home']" >Home</a></li>
-                <li><a href="#" [routerLink]="['/graph']" >Graphs</a></li>
+                <li ><a href="#" [routerLink]="['/home']">Home</a></li>
+                <li><a href="#" [routerLink]="['/graph']">Statistics</a></li>
+                <li><a href="#" [routerLink]="['/global']">Global</a></li>
             </ul>
             <!-- <ul class="nav navbar-nav navbar-right">
               <li class="dropdown">
@@ -39,4 +40,5 @@
 <router-outlet></router-outlet>
 </div>
 <div id="signature" class="container-fluid" >
-<label>{{signature}}</label></div>
+  <small>{{note}}</small><br><br>
+<p>{{signature}}</p></div>

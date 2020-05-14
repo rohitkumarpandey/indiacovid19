@@ -14,7 +14,18 @@
 input{
     margin-top: 5vh;
     margin-bottom: 5vh;
+    background: #1e272c;
+    color: cadetblue;
+    
+    
 }
+
+::placeholder{
+    color: cadetblue;
+    font-family: FontAwesome;
+}
+
+
 #summaryTable{
     margin-top: 5vh;
     margin-bottom: 10vh;

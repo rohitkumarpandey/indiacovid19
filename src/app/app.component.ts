@@ -13,8 +13,10 @@ declare function setTheme(mode):any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  signature : string = 'Developed By: ROHIT PANDEY'; 
-   constructor(private router : Router){
+  signature : string = 'Developer : Rohit Pandey';
+  note = '* This site is solely developed by the developer using the data available of the Pandemic Corona from different sources. If any fault or irrelevant data found then the developer will not liable for the mistakes. Kindly verify with the Official Government Site';
+
+  constructor(private router : Router){
        }
 
    ngOnInit(){

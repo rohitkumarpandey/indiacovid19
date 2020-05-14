@@ -1,0 +1,98 @@
+@media only screen and (max-width: 600px){
+    #countryTable thead tr th {
+        top: 5vh!important;
+    }
+   
+    
+    
+}
+
+input{
+    background-color: #1e272c;
+    color: cadetblue;
+    
+    
+}
+::placeholder{
+    color: cadetblue;
+    font-family: FontAwesome;
+}
+
+.row{
+    padding: 0;
+}
+
+#contentBox{
+    text-align: center;
+}
+#countryTable{
+    table-layout: fixed;
+    margin-top: 10px;
+    padding: 0;
+    word-spacing: normal;
+    word-break: keep-all;
+    
+}
+#globalTable{
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+    width: 100%;
+}
+#globalTable td{
+    font-size: large;
+}
+#globalTable tbody tr td div{
+    background-color: #17223B;
+    border-radius: 8px;
+    height: 10vh!important;
+    padding: 0.5em;
+    height: 100%;
+}
+
+thead{
+    text-align: center;
+    
+}
+th{
+    text-align: center;
+    font-size: x-small;
+   
+}
+tbody > tr{
+    text-align: center;
+    font-size: x-small;
+    font-weight: 700;
+    line-height: 3em;
+    
+   
+}
+
+
+
+#countryTable thead tr th{
+    position: sticky;
+    top: 8vh;
+    background-color: whitesmoke;
+    font-size: smaller;
+    
+}
+#countryTable tbody tr:hover{
+    background-color: whitesmoke!important;
+    color: cadetblue;
+}
+#countryTable tbody tr td{
+    background-color: #17223B;
+}
+
+#countryTable tbody tr td div{
+      padding: 1px;
+      width: 3%;
+}
+#countryTable tbody tr:hover{
+    background-color: aliceblue;
+   
+}
+
+
+
+

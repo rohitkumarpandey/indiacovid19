@@ -31,8 +31,6 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
-    
     this.updateData();
     $(document).ready(function(){
       $('#searchInput').on('keyup', function(){
@@ -44,6 +42,8 @@ export class DashboardComponent implements OnInit {
       });
   });
   }
+
+ 
 
 
   getAllData(){

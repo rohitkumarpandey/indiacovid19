@@ -37,6 +37,7 @@ ul li a{
     text-decoration: none;
     font-size:medium;
     color: white;
+    font-size: small;
 } 
 
 ul li a:hover{
@@ -47,7 +48,7 @@ nav{
     background:transparent;
     border: 0;
     border-width: 0;
-    font-size: medium;
+    font-size: small;
 
 }
 #myNavbar{
@@ -60,12 +61,15 @@ nav{
 }
 
 #signature{
-    margin-top: 5vh;
-    text-align: center;
+    margin-top: 1vh;
+    text-align: left;
     background-color: transparent;
-    color: whitesmoke;
     font-size: small;
     height: 8vh;
-    text-align: right;
-    border-radius: 6px!important;
+    border-radius: 6px;
+    bottom: 0;
+}
+
+#signature small{
+    color: cadetblue;
 }
